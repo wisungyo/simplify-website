@@ -16,9 +16,6 @@ const Footer = () => {
     { link: github, icon: AiFillGithub },
   ];
 
-  const stylesDivider = `bg-[${secondaryBlur}] h-[1px] mt-4 mb-16`;
-  const stylesFooter = `text-[${primaryBlur}] text-center mt-8`;
-
   const renderIcon = (link: string, IconComponent: React.ElementType) => (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <IconComponent size="1.8em" color={primaryBlur} />
@@ -28,11 +25,11 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className={stylesDivider} />
+        <div className={`bg-[${secondaryBlur}] h-[1px] mt-4 mb-16`} />
         <div className="flex flex-row gap-12 justify-center">
           {socialMediaData.map((data) => renderIcon(data.link, data.icon))}
         </div>
-        <p className={stylesFooter}>{footer}</p>
+        <p className={`text-[${primaryBlur}] text-center mt-8`}>{footer}</p>
       </div>
     </>
   );

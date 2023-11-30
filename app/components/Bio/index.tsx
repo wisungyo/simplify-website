@@ -10,12 +10,14 @@ const Bio = () => {
           {year}
           {bio}
         </p>
-        <a
-          href="mailto:wisungyo@gmail.com"
-          className="font-semibold text-lg text-cyan-600"
-        >
-          {toEmail}
-        </a>
+        <div className="flex flex-row">
+          <a
+            href="mailto:wisungyo@gmail.com"
+            className="font-semibold text-lg text-cyan-600"
+          >
+            {toEmail}
+          </a>
+        </div>
       </div>
     </>
   );
