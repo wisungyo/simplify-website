@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { bgPink, secondaryBlur } from "@/app/constants/colors";
 import { fullname, occupation } from "@/app/constants/labels";
 
 const Header = () => {
@@ -18,13 +17,13 @@ const Header = () => {
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-2xl">{fullname}</h1>
           <div>
-            <p className={`inline-block bg-[${bgPink}] font-base text-sm`}>
+            <p className="inline-block bg-[#E9D8FD] font-base text-sm">
               {occupation}
             </p>
           </div>
         </div>
       </div>
-      <div className={`bg-[${secondaryBlur}] h-[1px] my-4`} />
+      <div className="bg-[#E2E8F0] h-[1px] my-4" />
     </>
   );
 };
