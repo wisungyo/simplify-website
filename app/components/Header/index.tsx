@@ -11,15 +11,13 @@ const Header = () => {
           alt="wisungyo"
           width={profileWidth}
           height={profileWidth}
-          src={"/images/profile.png"}
+          src={"/images/profile.jpeg"}
           className="rounded-full"
         />
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-2xl">{fullname}</h1>
           <div>
-            <p className="inline bg-[#E9D8FD] font-base text-sm">
-              {occupation}
-            </p>
+            <p className="inline bg-accent font-base text-sm">{occupation}</p>
           </div>
         </div>
       </div>
