@@ -10,20 +10,19 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Wisnu Agung Prasetyo",
-    url: "https://www.wisungyo.com",
-    logo: "https://www.wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75",
+    url: "https://wisungyo.com",
+    logo: "https://wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75",
   };
 
   const metaTags = () => (
     <>
-      <link rel="canonical" href="https://www.wisungyo.com" />
       <meta
         name="description"
         content="Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:title" content="Wisnu Agung Prasetyo" />
-      <meta property="og:url" content="https://www.wisungyo.com/" />
+      <meta property="og:url" content="https://wisungyo.com/" />
       <meta property="og:type" content="website" />
       <meta
         property="og:description"
@@ -31,7 +30,7 @@ export default function Home() {
       />
       <meta
         property="og:image"
-        content="https://www.wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75"
+        content="https://wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75"
       />
       <meta property="og:image:alt" content="Wisnu Agung Prasetyo" />
       <meta property="og:locale" content="en_US" />
@@ -43,6 +42,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <link rel="canonical" href="https://wisungyo.com" />
         {metaTags()}
         <StructuredData data={jsonData} />
       </Head>
