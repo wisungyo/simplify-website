@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Wisnu Agung Prasetyo",
   description:
-    "Also called wisungyo. A mobile developer lived in Indonesia. Currently working in Laku6.com and has been there for almost 3 years now.",
+    "Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar. Graduated from State University of Malang in 2020.",
 };
 
 export default function RootLayout({
