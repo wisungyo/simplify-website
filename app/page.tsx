@@ -19,7 +19,7 @@ export default function Home() {
       <link rel="canonical" href="https://www.wisungyo.com" />
       <meta
         name="description"
-        content="Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar. Graduated from State University of Malang in 2020."
+        content="Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:title" content="Wisnu Agung Prasetyo" />
@@ -27,7 +27,7 @@ export default function Home() {
       <meta property="og:type" content="website" />
       <meta
         property="og:description"
-        content="Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar. Graduated from State University of Malang in 2020."
+        content="Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar"
       />
       <meta
         property="og:image"
