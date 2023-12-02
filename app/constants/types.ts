@@ -10,6 +10,7 @@ export type IconPanel = {
   IconInactive: React.ElementType;
   color: string;
   isActive: boolean;
+  onClick?: any;
 };
 
 export type ChatBubble = {
@@ -28,4 +29,11 @@ export type Question = {
 export type AnswerChatBubble = {
   id: string;
   answer: ChatBubble[];
+};
+
+export type Quotes = {
+  id: string;
+  text: string;
+  category: string;
+  author?: string;
 };

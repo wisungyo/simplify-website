@@ -1,4 +1,4 @@
-import { AnswerChatBubble, ChatBubble, Question } from "./types";
+import { AnswerChatBubble, ChatBubble, Question, Quotes } from "./types";
 
 export const initChats: ChatBubble[] = [
   {
@@ -146,5 +146,164 @@ export const answerChat: AnswerChatBubble[] = [
         lastBubble: true,
       },
     ],
+  },
+];
+
+export const likeResponse: ChatBubble[] = [
+  {
+    text: "🎉🎉 🥳🥳 ❤️❤️",
+    position: "start",
+    lastBubble: false,
+  },
+  {
+    text: "Yahoo.. I’m glad you like it !!",
+    position: "start",
+    lastBubble: false,
+  },
+  {
+    text: "Let me celebrate it by giving you quote of the day :",
+    position: "start",
+    lastBubble: false,
+  },
+];
+
+export const shareResponse: ChatBubble[] = [
+  {
+    text: "📝📝 ✅✅",
+    position: "start",
+    lastBubble: false,
+  },
+  {
+    text: "Whoos! You just clicked share button.",
+    position: "start",
+    lastBubble: false,
+  },
+  {
+    text: "{ wisungyo.com } is copied to your clipboard. Feel free to share anywhere you want ya.. 😊",
+    position: "start",
+    lastBubble: true,
+  },
+];
+
+export const quotes: Quotes[] = [
+  {
+    id: "0",
+    text: "Oh Allah, when I lose my hopes and plans, help me remember that your love is greater than my disappointments, and your plans for my life are better than my dreams.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "1",
+    text: "If you like somebody, ask Allah to give them to you. If you still don't get them, know that somebody else asked Allah for you.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "2",
+    text: "It is easier to turn a mountain into dust, than to create love in a heart that is filled with hatred.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "3",
+    text: "What’s meant for you will never miss you and what missed you was never meant for you.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "4",
+    text: "Do not raise your children the way your parents raised you, they were born for a different time.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "5",
+    text: "Never explain yourself to anyone, because the one who likes you would not need it, and the one dislikes you would not believe it.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "6",
+    text: "Hate no one, no matter how much they’ve wronged you. Live humbly, no matter how wealthy you become. Think positively, no matter how hard life is. Give much, even if you’ve been given little. Keep in touch with the ones who have forgotten you, and forgive who has wronged you, and not stop praying for the best for those you love.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "7",
+    text: "Be like a flower that gives its fragrance even to the hand that crushed it.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "8",
+    text: "Never make a decision in anger, and never make promise in happiness.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "9",
+    text: "The worst of our faults is our interest in other people’s faults.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "10",
+    text: "How strange and foolish is man. He loses his health in gaining wealth. Then, to regain health, he wastes his wealth. He ruins his present while worrying about his future - but weeps in the future by recalling his past. He lives as though death shall never come to him - but dies in a way as if he were never born.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "11",
+    text: "Beautiful people are not always good, but good people are always beautiful.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "12",
+    text: "The days of life pass away like clouds, so do good while you are alive.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "13",
+    text: "A hopeless man sees difficulties in every chance, but a hopeful person sees chances in every difficulty.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "14",
+    text: "Authority, power, and wealth do not change a man; they only reveal him.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "15",
+    text: "Life consists of two days: one for you and one against you, so when it's for you don't be proud or reckless, and when it's against you be patient, for both days are test for you",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "16",
+    text: "Do not let your difficulties fill you with anxiety, after all it is only in the darkest nights that stars shine more brightly.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "17",
+    text: "Do not use the sharpness of your speech on your mother who taught you how to speak.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "18",
+    text: "Don't engage your heart in grief over the past, or you won't be ready for what is coming.",
+    category: "motivation",
+    author: "Ali bin Abi Tholib",
+  },
+  {
+    id: "19",
+    text: "Not every man with a heart is understanding, nor every man with an ear a listener, and nor every man with eyes able to see.",
+    category: "motivation",
+    author: "",
   },
 ];

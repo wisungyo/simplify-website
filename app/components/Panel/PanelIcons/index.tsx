@@ -13,13 +13,39 @@ import {
 import { useState } from "react";
 import { IconPanel } from "@/app/constants/types";
 import { primaryBlur } from "@/app/constants/colors";
+import { useAppContext } from "../AppContext";
 import IconToggle from "@/app/components/IconToggle";
+import clipboardCopy from "clipboard-copy";
 
 const PanelIcons = () => {
   const [isLiked, setIsLiked] = useState<boolean>(false);
-  const [isChatting, setIsChatting] = useState<boolean>(false);
+  const [isChatting, setIsChatting] = useState<boolean>(true);
   const [isShared, setIsShared] = useState<boolean>(false);
   const [isDark, setIsDark] = useState<boolean>(false);
+  const { isLikeBtn, isShareBtn, toggleLikeBtn, toggleShareBtn } =
+    useAppContext();
+
+  const handleLike = () => {
+    setIsLiked((prevIsLiked) => !prevIsLiked);
+    toggleLikeBtn();
+  };
+
+  const handleShare = async () => {
+    try {
+      await clipboardCopy("https://wisungyo.com");
+      toggleShareBtn();
+      setIsShared(true);
+      setTimeout(() => {
+        setIsShared(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Error copying to clipboard:", error);
+    }
+  };
+
+  const handleDark = () => {
+    setIsDark(!isDark);
+  };
 
   const panelIcons: IconPanel[] = [
     {
@@ -27,27 +53,25 @@ const PanelIcons = () => {
       IconActive: IoHeart,
       IconInactive: IoHeartOutline,
       color: primaryBlur,
-      isActive: false,
+      isActive: isLikeBtn,
+      onClick: handleLike,
     },
     {
       name: "chat",
       IconActive: IoChatbubbleEllipses,
       IconInactive: IoChatbubbleEllipsesOutline,
       color: primaryBlur,
-      isActive: true,
+      isActive: isChatting,
     },
     {
       name: "share",
       IconActive: IoPaperPlane,
       IconInactive: IoPaperPlaneOutline,
       color: primaryBlur,
-      isActive: false,
+      isActive: isShareBtn,
+      onClick: handleShare,
     },
   ];
-
-  const handleDark = () => {
-    setIsDark(!isDark);
-  };
 
   return (
     <>
@@ -61,6 +85,7 @@ const PanelIcons = () => {
               IconInactive={data.IconInactive}
               color={data.color}
               isActive={data.isActive}
+              onClick={data.onClick}
             />
           ))}
         </div>
