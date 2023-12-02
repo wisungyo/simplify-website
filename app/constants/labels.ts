@@ -8,4 +8,5 @@ export const tapHere = "Tap to ask!";
 export const goodMorning = "Hi, Good Morning! ☀️";
 export const goodAfternoon = "Hi, Good Afternoon! 🌤️";
 export const goodEvening = "Hi, Good Evening! 🌛⭐️";
-export const goodDawn = "Hey, what time is it? Why don’t you sleep? 😴🤔";
+export const goodDawn =
+  "🌛⭐️ 😴😴 Hi, It's mid night already. Why don’t you sleep? Well, Anyway...";
