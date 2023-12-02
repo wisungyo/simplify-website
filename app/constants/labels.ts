@@ -5,3 +5,7 @@ export const bio =
 export const toEmail = "Interested in working together? Email me!";
 export const footer = "© 2023 Wisnu Agung Prasetyo, All Rights Reserved";
 export const tapHere = "Tap to ask!";
+export const goodMorning = "Hi, Good Morning! ☀️";
+export const goodAfternoon = "Hi, Good Afternoon! 🌤️";
+export const goodEvening = "Hi, Good Evening! 🌛⭐️";
+export const goodDawn = "Hey, what time is it? Why don’t you sleep? 😴🤔";
