@@ -99,8 +99,8 @@ const PanelIcons = () => {
           />
           <IconToggle
             name={"love"}
-            IconActive={IoSunnyOutline}
-            IconInactive={IoMoonOutline}
+            IconActive={IoMoonOutline}
+            IconInactive={IoSunnyOutline}
             color="neutral"
             isActive={isDark}
           />
