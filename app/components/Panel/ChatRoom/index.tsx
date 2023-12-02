@@ -1,15 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { answerChat, initChats, questions } from "@/app/constants/values";
 import ChatBubble from "@/app/components/ChatBubble";
 import { ChatBubble as ChatBubbleType, Question } from "@/app/constants/types";
-import { tapHere } from "@/app/constants/labels";
+import {
+  goodAfternoon,
+  goodDawn,
+  goodEvening,
+  goodMorning,
+  tapHere,
+} from "@/app/constants/labels";
 
 const ChatRoom = () => {
-  const [chats, setChats] = useState<ChatBubbleType[]>(initChats);
+  const [chats, setChats] = useState<ChatBubbleType[]>([]);
   const [isAsk, setIsAsk] = useState<boolean>(false);
   const [isSliced, setIsSliced] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setInitChats();
+  }, []);
+
+  const setInitChats = () => {
+    const currentTime = new Date().getHours();
+    const greeting = {
+      text: getGreeting(currentTime),
+      position: "start",
+      lastBubble: false,
+    };
+    const updatedChat = [greeting, ...initChats];
+    setChats(updatedChat);
+    setIsLoading(false);
+  };
+
+  const getGreeting = (currentTime: number): string => {
+    const dawnEnd = 4;
+    const morningEnd = 12;
+    const afternoonEnd = 18;
+
+    if (currentTime < dawnEnd) return goodDawn;
+    else if (currentTime < morningEnd) return goodMorning;
+    else if (currentTime < afternoonEnd) return goodAfternoon;
+    else return goodEvening;
+  };
 
   const handleAsk = (data: Question) => {
     const question = {
@@ -18,20 +52,23 @@ const ChatRoom = () => {
       lastBubble: true,
     };
 
-    const chat = chats.push(question);
-    const answer = answerChat.find((obj) => obj.id === data.id);
+    chats.push(question);
+    setIsLoading(true);
 
+    const answer = answerChat.find((obj) => obj.id === data.id);
     if (answer) {
       setTimeout(() => {
-        let newChat = chats.concat(answer.answer);
+        let newChat = chats.concat(answer.answer); // HERE SOMETIMES PREVIOUS UDPATE REPLACED
         if (newChat.length > 10) {
           newChat = newChat.slice(newChat.length - 10);
           setIsSliced(true);
         }
         setChats(newChat);
-      }, 500);
+        setIsLoading(false);
+      }, 650);
+    } else {
+      setIsLoading(false);
     }
-
     setIsAsk(false);
   };
 
@@ -49,6 +86,11 @@ const ChatRoom = () => {
             lastBubble={data.lastBubble}
           />
         ))}
+        {isLoading && (
+          <div className="flex flex-row text-sm italic text-primary">
+            Wisnu is typing...
+          </div>
+        )}
       </div>
       <div className="mt-8">
         {isAsk ? (

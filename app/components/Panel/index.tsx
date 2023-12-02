@@ -1,5 +1,5 @@
-import ChatRoom from "./ChatRoom";
 import PanelIcons from "./PanelIcons";
+import ChatRoom from "./ChatRoom";
 
 const Panel = () => {
   return (

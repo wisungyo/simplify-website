@@ -2,7 +2,7 @@ import { AnswerChatBubble, ChatBubble, Question } from "./types";
 
 export const initChats: ChatBubble[] = [
   {
-    text: "Hi, this is Wisnu..",
+    text: "I'm Wisnu..",
     position: "start",
     lastBubble: false,
   },
