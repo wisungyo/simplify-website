@@ -7,8 +7,8 @@ import {
   IoChatbubbleEllipsesOutline,
   IoPaperPlane,
   IoPaperPlaneOutline,
-  IoSunny,
   IoSunnyOutline,
+  IoMoonOutline,
 } from "react-icons/io5";
 import { useState } from "react";
 import { IconPanel } from "@/app/constants/types";
@@ -16,6 +16,7 @@ import { primaryBlur } from "@/app/constants/colors";
 import { useAppContext } from "../AppContext";
 import IconToggle from "@/app/components/IconToggle";
 import clipboardCopy from "clipboard-copy";
+import { wisungyoCom } from "@/app/constants/links";
 
 const PanelIcons = () => {
   const [isLiked, setIsLiked] = useState<boolean>(false);
@@ -32,7 +33,7 @@ const PanelIcons = () => {
 
   const handleShare = async () => {
     try {
-      await clipboardCopy("https://wisungyo.com");
+      await clipboardCopy(wisungyoCom);
       toggleShareBtn();
       setIsShared(true);
       setTimeout(() => {
@@ -98,8 +99,8 @@ const PanelIcons = () => {
           />
           <IconToggle
             name={"love"}
-            IconActive={IoSunny}
-            IconInactive={IoSunnyOutline}
+            IconActive={IoSunnyOutline}
+            IconInactive={IoMoonOutline}
             color="neutral"
             isActive={isDark}
           />
