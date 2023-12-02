@@ -39,7 +39,7 @@ const ChatRoom = () => {
     <>
       <div className="flex flex-col gap-2">
         {isSliced && (
-          <div className="flex flex-row justify-center text-cyan-600">•••</div>
+          <div className="flex flex-row justify-center text-primary">•••</div>
         )}
         {chats.map((data, index) => (
           <ChatBubble
@@ -50,26 +50,28 @@ const ChatRoom = () => {
           />
         ))}
       </div>
-      {isAsk ? (
-        <div className="flex flex-row scroll-smooth flex-wrap">
-          {questions.map((data, index) => (
-            <div
-              key={index}
-              className="py-2 px-3 rounded-xl border text-xs whitespace-nowrap mr-2 mb-2 cursor-pointer hover:bg-sky-50"
-              onClick={() => handleAsk(data)}
-            >
-              {data.text}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div
-          className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-sky-50 cursor-pointer"
-          onClick={() => setIsAsk(true)}
-        >
-          {tapHere}
-        </div>
-      )}
+      <div className="mt-8">
+        {isAsk ? (
+          <div className="flex flex-row scroll-smooth flex-wrap">
+            {questions.map((data, index) => (
+              <div
+                key={index}
+                className="py-2 px-3 rounded-xl text-xs whitespace-nowrap mr-2 mb-2 cursor-pointer shadow-sm ring-1 ring-inset ring-neutral hover:bg-neutral-content hover:text-neutral"
+                onClick={() => handleAsk(data)}
+              >
+                {data.text}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div
+            className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-neutral text-neutral-content px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-neutral hover:bg-neutral-content hover:text-neutral cursor-pointer"
+            onClick={() => setIsAsk(true)}
+          >
+            {tapHere}
+          </div>
+        )}
+      </div>
     </>
   );
 };

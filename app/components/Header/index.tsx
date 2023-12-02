@@ -17,11 +17,13 @@ const Header = () => {
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-2xl">{fullname}</h1>
           <div>
-            <h2 className="inline bg-accent font-base text-sm">{occupation}</h2>
+            <h2 className="inline bg-primary text-primary-content font-base text-sm">
+              {occupation}
+            </h2>
           </div>
         </div>
       </div>
-      <div className="bg-[#E2E8F0] h-[1px] my-4" />
+      <div className="bg-neutral h-[1px] my-4" />
     </>
   );
 };

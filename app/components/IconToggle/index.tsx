@@ -10,9 +10,9 @@ const IconToggle = ({
   return (
     <>
       {isActive ? (
-        <IconActive size="2em" color={color} className="cursor-pointer" />
+        <IconActive size="2em" color="neutral" className="cursor-pointer" />
       ) : (
-        <IconInactive size="2em" color={color} className="cursor-pointer" />
+        <IconInactive size="2em" color="neutral" className="cursor-pointer" />
       )}
     </>
   );

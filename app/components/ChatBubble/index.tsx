@@ -6,10 +6,11 @@ const ChatBubble = ({
   lastBubble,
   size = "normal",
 }: ChatBubbleType) => {
-  const stylesBg = position === "end" ? "bg-[#A0AEC0]" : "";
+  const stylesBg = position === "end" ? "bg-neutral" : "";
   const stylesPoss = position === "end" ? "justify-end" : "justify-start";
   const stylesLast = lastBubble ? "mb-4" : "";
-  const stylesTextColor = position === "end" ? "text-white" : "";
+  const stylesTextColor = position === "end" ? "text-neutral-content" : "";
+  const stylesBorder = position === "end" ? "border-neutral" : "border-neutral";
 
   return (
     <>
@@ -17,7 +18,7 @@ const ChatBubble = ({
         <div className="max-w-[90%]">
           <div>
             <div
-              className={`inline-block rounded-[16px] border px-4 py-2 ${stylesBg} ${stylesTextColor}`}
+              className={`inline-block rounded-[16px] border px-4 py-2 text-sm ${stylesBorder} ${stylesBg} ${stylesTextColor}`}
             >
               <p>{text}</p>
             </div>

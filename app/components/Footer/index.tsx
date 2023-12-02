@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="bg-[#E2E8F0] h-[1px] mt-4 mb-16" />
+        <div className="bg-neutral h-[1px] mt-4 mb-16" />
         <FooterIcons />
-        <p className="text-[#A0AEC0] text-center mt-8">{footer}</p>
+        <p className="text-neutral-accent text-center mt-8">{footer}</p>
       </div>
     </>
   );

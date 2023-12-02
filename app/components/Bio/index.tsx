@@ -13,7 +13,7 @@ const Bio = () => {
         <div className="flex flex-row">
           <a
             href="mailto:wisungyo@gmail.com"
-            className="font-semibold text-lg text-cyan-600"
+            className="font-semibold text-lg text-primary"
           >
             {toEmail}
           </a>
