@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { answerChat, initChats, questions } from "@/app/constants/values";
+import {
+  answerChat,
+  initChats,
+  likeResponse,
+  questions,
+  quotes,
+  shareResponse,
+} from "@/app/constants/values";
 import ChatBubble from "@/app/components/ChatBubble";
 import { ChatBubble as ChatBubbleType, Question } from "@/app/constants/types";
+import { useAppContext } from "../AppContext";
 import {
   goodAfternoon,
   goodDawn,
@@ -17,10 +25,37 @@ const ChatRoom = () => {
   const [isAsk, setIsAsk] = useState<boolean>(false);
   const [isSliced, setIsSliced] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { isLikeBtn, isShareBtn } = useAppContext();
 
   useEffect(() => {
     setInitChats();
   }, []);
+
+  useEffect(() => {
+    if (isLikeBtn) {
+      const randomNumber = Math.floor(Math.random() * 20);
+      const quote = quotes.find((data) => data.id === randomNumber.toString());
+
+      if (quote) {
+        const quoteChat = {
+          text: quote.text,
+          position: "start",
+          lastBubble: true,
+        };
+
+        const response = [...likeResponse, quoteChat];
+        const updatedChat = balanceChats(response);
+        setChats(updatedChat);
+      }
+    }
+  }, [isLikeBtn]);
+
+  useEffect(() => {
+    if (isShareBtn) {
+      const updatedChat = balanceChats(shareResponse);
+      setChats(updatedChat);
+    }
+  }, [isShareBtn]);
 
   const setInitChats = () => {
     const currentTime = new Date().getHours();
@@ -45,6 +80,16 @@ const ChatRoom = () => {
     else return goodEvening;
   };
 
+  const balanceChats = (array: ChatBubbleType[]) => {
+    let updatedChat = [...chats, ...array];
+    if (updatedChat.length > 10) {
+      updatedChat = updatedChat.slice(updatedChat.length - 10);
+      setIsSliced(true);
+    }
+
+    return updatedChat;
+  };
+
   const handleAsk = (data: Question) => {
     const question = {
       text: data.question,
@@ -58,11 +103,7 @@ const ChatRoom = () => {
     const answer = answerChat.find((obj) => obj.id === data.id);
     if (answer) {
       setTimeout(() => {
-        let newChat = chats.concat(answer.answer); // HERE SOMETIMES PREVIOUS UDPATE REPLACED
-        if (newChat.length > 10) {
-          newChat = newChat.slice(newChat.length - 10);
-          setIsSliced(true);
-        }
+        const newChat = balanceChats(answer.answer);
         setChats(newChat);
         setIsLoading(false);
       }, 650);
