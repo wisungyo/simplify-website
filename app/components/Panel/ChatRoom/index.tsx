@@ -44,16 +44,16 @@ const ChatRoom = () => {
         };
 
         const response = [...likeResponse, quoteChat];
-        const updatedChat = balanceChats(response);
-        setChats(updatedChat);
+        setIsSliced(false);
+        setChats(response);
       }
     }
   }, [isLikeBtn]);
 
   useEffect(() => {
     if (isShareBtn) {
-      const updatedChat = balanceChats(shareResponse);
-      setChats(updatedChat);
+      setIsSliced(false);
+      setChats(shareResponse);
     }
   }, [isShareBtn]);
 
@@ -118,6 +118,13 @@ const ChatRoom = () => {
       <div className="flex flex-col gap-2">
         {isSliced && (
           <div className="flex flex-row justify-center text-primary">•••</div>
+        )}
+        {isLikeBtn && (
+          <div className="flex flex-row justify-center">
+            <div className="text-primary text-xs bg-primary text-primary-content rounded-lg py-1 px-2">
+              New Chat
+            </div>
+          </div>
         )}
         {chats.map((data, index) => (
           <ChatBubble

@@ -81,7 +81,7 @@ export const answerChat: AnswerChatBubble[] = [
         lastBubble: false,
       },
       {
-        text: " These skills power my ability to craft top-notch mobile apps and create dynamic frontend experiences.",
+        text: "These skills power my ability to craft top-notch mobile apps and create dynamic frontend experiences.",
         position: "start",
         lastBubble: true,
       },
