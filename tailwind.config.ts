@@ -17,7 +17,7 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["emerald", "dracula"],
+    themes: ["dracula", "lemonade"],
     base: true,
     styled: true,
     utils: true,
