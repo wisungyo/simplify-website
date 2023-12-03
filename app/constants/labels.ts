@@ -4,7 +4,7 @@
 export const callname = "Wisnu";
 export const fullname = "Wisnu Agung Prasetyo";
 export const nickname = "wisungyo";
-export const occupation = "Software Engineer (Mobile & Frontend)";
+export const occupation = "Software Engineer";
 export const bio =
   "+ year experienced software engineer 👨🏻‍💻 specializing in Mobile & Frontend technologies. Based in Jakarta 🇮🇩";
 export const toEmail = "Interested in working together? Email me!";
