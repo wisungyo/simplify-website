@@ -13,10 +13,12 @@ import ChatBubble from "@/app/components/ChatBubble";
 import { ChatBubble as ChatBubbleType, Question } from "@/app/constants/types";
 import { useAppContext } from "../AppContext";
 import {
+  callname,
   goodAfternoon,
   goodDawn,
   goodEvening,
   goodMorning,
+  isTyping,
   tapHere,
 } from "@/app/constants/labels";
 
@@ -87,7 +89,6 @@ const ChatRoom = () => {
       updatedChat = updatedChat.slice(updatedChat.length - 10);
       setIsSliced(true);
     }
-
     return updatedChat;
   };
 
@@ -97,7 +98,6 @@ const ChatRoom = () => {
       position: "end",
       lastBubble: true,
     };
-
     chats.push(question);
     setIsLoading(true);
 
@@ -122,7 +122,7 @@ const ChatRoom = () => {
         )}
         {isLikeBtn && (
           <div className="flex flex-row justify-center">
-            <div className="text-primary text-xs bg-primary text-primary-content rounded-lg py-1 px-2">
+            <div className="text-xs bg-primary text-primary-content rounded-lg py-1 px-2">
               New Chat
             </div>
           </div>
@@ -138,7 +138,7 @@ const ChatRoom = () => {
         ))}
         {isLoading && (
           <div className="flex flex-row text-sm italic text-primary">
-            Wisnu is typing...
+            {callname} {isTyping}
           </div>
         )}
       </div>

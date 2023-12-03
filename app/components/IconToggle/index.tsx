@@ -4,17 +4,18 @@ const IconToggle = ({
   name,
   IconActive,
   IconInactive,
-  color,
+  color = "neutral",
   isActive,
   onClick = () => {},
+  size = "2em",
 }: IconPanel) => {
   return (
     <>
       <div onClick={onClick}>
         {isActive ? (
-          <IconActive size="2em" color="neutral" className="cursor-pointer" />
+          <IconActive size={size} color={color} className="cursor-pointer" />
         ) : (
-          <IconInactive size="2em" color="neutral" className="cursor-pointer" />
+          <IconInactive size={size} color={color} className="cursor-pointer" />
         )}
       </div>
     </>

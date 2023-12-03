@@ -8,7 +8,7 @@ const Panel = () => {
       <AppProvider>
         <div className="bg-neutral h-[1px] my-4" />
         <PanelIcons />
-        <div className=" my-8" />
+        <div className="my-8" />
         <ChatRoom />
       </AppProvider>
     </>

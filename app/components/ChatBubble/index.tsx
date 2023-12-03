@@ -1,3 +1,5 @@
+import { quoteOfTheDay } from "@/app/constants/labels";
+import { wisungyoCom } from "@/app/constants/links";
 import { ChatBubble as ChatBubbleType } from "@/app/constants/types";
 
 const ChatBubble = ({
@@ -23,13 +25,13 @@ const ChatBubble = ({
             >
               {type === "quote" && (
                 <p className="text-[10px] text-primary italic">
-                  Quote of the day
+                  {quoteOfTheDay}
                 </p>
               )}
               <p>{text}</p>
               {type === "quote" && (
                 <p className="text-[10px] text-primary italic text-end">
-                  wisungyo.com
+                  {wisungyoCom}
                 </p>
               )}
             </div>
