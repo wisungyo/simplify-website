@@ -10,11 +10,8 @@ const Bio = () => {
           {year}
           {bio}
         </p>
-        <div className="flex flex-row">
-          <a
-            href={`mailto:${myEmail}`}
-            className="font-semibold text-lg text-primary"
-          >
+        <div className="flex flex-row mt-2">
+          <a href={`mailto:${myEmail}`} className="font-semibold text-primary">
             {toEmail}
           </a>
         </div>

@@ -81,7 +81,7 @@ const PanelIcons = () => {
           <input
             type="checkbox"
             className="theme-controller"
-            value="emerald"
+            value="lemonade"
             onClick={handleDark}
           />
           <IconToggle
