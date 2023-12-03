@@ -18,9 +18,9 @@
 - [ ] Non breaking change
       Fix or feature that would not affect existing functionality
 - [ ] This change requires a documentation update
-      Specify which documentation needs to be updated.
+      Specify which documentation needs to be updated
       Provide links to the doc if necessary
-      E.g API Doc, API Doc, Data Flow Diagram, Play/App store assets, training docs.
+      E.g API Doc, API Doc, Data Flow Diagram, Play/App store assets, training docs
 - [ ] This change requires running database migrations
 - [ ] This change requires config / env update
 
