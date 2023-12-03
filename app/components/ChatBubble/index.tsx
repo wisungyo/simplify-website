@@ -5,6 +5,7 @@ const ChatBubble = ({
   position,
   lastBubble,
   size = "normal",
+  type = "normal",
 }: ChatBubbleType) => {
   const stylesBg = position === "end" ? "bg-neutral" : "";
   const stylesPoss = position === "end" ? "justify-end" : "justify-start";
@@ -20,7 +21,17 @@ const ChatBubble = ({
             <div
               className={`inline-block rounded-[16px] border px-4 py-2 text-sm ${stylesBorder} ${stylesBg} ${stylesTextColor}`}
             >
+              {type === "quote" && (
+                <p className="text-[10px] text-primary italic">
+                  Quote of the day
+                </p>
+              )}
               <p>{text}</p>
+              {type === "quote" && (
+                <p className="text-[10px] text-primary italic text-end">
+                  wisungyo.com
+                </p>
+              )}
             </div>
           </div>
         </div>

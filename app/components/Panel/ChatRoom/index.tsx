@@ -41,6 +41,7 @@ const ChatRoom = () => {
           text: quote.text,
           position: "start",
           lastBubble: true,
+          type: "quote",
         };
 
         const response = [...likeResponse, quoteChat];
@@ -132,6 +133,7 @@ const ChatRoom = () => {
             text={data.text}
             position={data.position}
             lastBubble={data.lastBubble}
+            type={data?.type}
           />
         ))}
         {isLoading && (
