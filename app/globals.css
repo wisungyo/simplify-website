@@ -6,3 +6,23 @@ body {
   color: rgb(var(--foreground-rgb));
   padding: 1rem;
 }
+
+/* styles/globals.css or any appropriate CSS file */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox and other non-WebKit browsers */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* styles/globals.css or any appropriate CSS file */
+.cursor-grab {
+  cursor: grab !important;
+}
+
+.cursor-grabbing {
+  cursor: grabbing !important;
+}
