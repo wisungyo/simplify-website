@@ -10,6 +10,8 @@ export const bio =
 export const toEmail = "Interested in working together? Email me!";
 export const myEmail = "wisungyo@gmail.com";
 export const footer = "© 2023 Wisnu Agung Prasetyo, All Rights Reserved";
+export const description =
+  "Also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group. Working remotely from home, Blitar";
 
 /**
  *  GREETING
