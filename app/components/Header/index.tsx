@@ -6,18 +6,19 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center gap-6">
-        <Image
-          alt="wisungyo"
-          width={profileWidth}
-          height={profileWidth}
-          src={"/images/profile.jpeg"}
-          className="rounded-full"
-        />
-        <div className="flex flex-col gap-2">
-          <h1 className="font-bold text-2xl">{fullname}</h1>
-          <div>
-            <h2 className="inline bg-primary text-primary-content font-base text-sm">
+      <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+        <div className="w-32 sm:w-24 h-32 sm:h-24 relative">
+          <Image
+            alt="wisungyo"
+            src={"/images/profile.jpeg"}
+            className="rounded-full"
+            fill
+          />
+        </div>
+        <div className="flex flex-col items-start gap-1">
+          <h1 className="font-bold text-2xl text-center">{fullname}</h1>
+          <div className="w-full">
+            <h2 className="text-primary text-center sm:text-start">
               {occupation}
             </h2>
           </div>
