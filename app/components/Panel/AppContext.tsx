@@ -4,8 +4,8 @@ import React, { createContext, useContext, useState } from "react";
 
 interface AppContextProps {
   isLikeBtn: boolean;
-  toggleLikeBtn: () => void;
   isShareBtn: boolean;
+  toggleLikeBtn: () => void;
   toggleShareBtn: () => void;
 }
 

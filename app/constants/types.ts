@@ -8,9 +8,10 @@ export type IconPanel = {
   name: string;
   IconActive: React.ElementType;
   IconInactive: React.ElementType;
-  color: string;
+  color?: string;
   isActive: boolean;
   onClick?: any;
+  size?: string;
 };
 
 export type ChatBubble = {

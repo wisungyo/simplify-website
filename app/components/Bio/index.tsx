@@ -1,4 +1,4 @@
-import { bio, toEmail } from "@/app/constants/labels";
+import { bio, myEmail, toEmail } from "@/app/constants/labels";
 
 const Bio = () => {
   const year = new Date().getFullYear() - 2020;
@@ -12,7 +12,7 @@ const Bio = () => {
         </p>
         <div className="flex flex-row">
           <a
-            href="mailto:wisungyo@gmail.com"
+            href={`mailto:${myEmail}`}
             className="font-semibold text-lg text-primary"
           >
             {toEmail}
