@@ -18,6 +18,7 @@ export type ChatBubble = {
   position: string; // options: "start" or "end"
   lastBubble: boolean;
   size?: string;
+  type?: string; // options: "normal" | "quote"
 };
 
 export type Question = {
