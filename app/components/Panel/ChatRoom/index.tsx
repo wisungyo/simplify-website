@@ -116,7 +116,7 @@ const ChatRoom = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-8">
         {isSliced && (
           <div className="flex flex-row justify-center text-primary">•••</div>
         )}

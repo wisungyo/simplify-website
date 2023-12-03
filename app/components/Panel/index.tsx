@@ -1,14 +1,14 @@
 import PanelIcons from "./PanelIcons";
 import ChatRoom from "./ChatRoom";
 import { AppProvider } from "./AppContext";
+import Divider from "../Divider";
 
 const Panel = () => {
   return (
     <>
       <AppProvider>
-        <div className="bg-neutral h-[1px] my-4" />
+        <Divider />
         <PanelIcons />
-        <div className="my-8" />
         <ChatRoom />
       </AppProvider>
     </>

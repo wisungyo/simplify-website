@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { fullname, occupation } from "@/app/constants/labels";
+import Divider from "../Divider";
 
 const Header = () => {
-  const profileWidth: number = 96;
-
   return (
     <>
       <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-        <div className="w-32 sm:w-24 h-32 sm:h-24 relative">
+        <div className="w-32 sm:w-24 h-32 sm:h-24 relative rounded-full shadow-2xl">
           <Image
             alt="wisungyo"
             src={"/images/profile.jpeg"}
@@ -24,7 +23,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="bg-neutral h-[1px] my-4" />
+      <Divider />
     </>
   );
 };
