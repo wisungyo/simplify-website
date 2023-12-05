@@ -1,5 +1,7 @@
 import { AnswerChatBubble, ChatBubble, Question, Quotes } from "./types";
 
+export const maxChats: number = 10;
+
 export const initChats: ChatBubble[] = [
   {
     text: "I'm Wisnu..",

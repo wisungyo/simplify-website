@@ -6,30 +6,25 @@ import {
   initChats,
   likeResponse,
   questions,
-  quotes,
   shareResponse,
 } from "@/app/constants/values";
-import ChatBubble from "@/app/components/ChatBubble";
+import { callname, isTyping, newChat, threeDots } from "@/app/constants/labels";
 import { ChatBubble as ChatBubbleType, Question } from "@/app/constants/types";
 import { useAppContext } from "../AppContext";
-import {
-  callname,
-  goodAfternoon,
-  goodDawn,
-  goodEvening,
-  goodMorning,
-  isTyping,
-  newChat,
-  tapHere,
-  threeDots,
-} from "@/app/constants/labels";
+import ChatBubble from "@/app/components/ChatBubble";
+import Button from "@/app/components/Button";
+import BubbleQuestion from "@/app/components/BubbleQuestion";
+import randQuote from "@/app/hooks/randQuote";
+import getGreeting from "@/app/hooks/getGreeting";
+import balanceChats from "@/app/hooks/balanceChats";
+import generateChat from "@/app/hooks/generateChat";
 
 const ChatRoom = () => {
+  const { isLikeBtn, isShareBtn } = useAppContext();
   const [chats, setChats] = useState<ChatBubbleType[]>([]);
   const [isAsk, setIsAsk] = useState<boolean>(false);
   const [isSliced, setIsSliced] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const { isLikeBtn, isShareBtn } = useAppContext();
 
   useEffect(() => {
     setInitChats();
@@ -37,16 +32,15 @@ const ChatRoom = () => {
 
   useEffect(() => {
     if (isLikeBtn) {
-      const randomNumber = Math.floor(Math.random() * 20);
-      const quote = quotes.find((data) => data.id === randomNumber.toString());
+      const randomQuote = randQuote();
 
-      if (quote) {
-        const quoteChat = {
-          text: quote.text,
-          position: "start",
-          lastBubble: true,
-          type: "quote",
-        };
+      if (randomQuote) {
+        const quoteChat = generateChat(
+          randomQuote.text,
+          "start",
+          true,
+          "quote"
+        );
 
         const response = [...likeResponse, quoteChat];
         setIsSliced(false);
@@ -63,50 +57,23 @@ const ChatRoom = () => {
   }, [isShareBtn]);
 
   const setInitChats = () => {
-    const currentTime = new Date().getHours();
-    const greeting = {
-      text: getGreeting(currentTime),
-      position: "start",
-      lastBubble: false,
-    };
+    const greeting = getGreeting();
     const updatedChat = [greeting, ...initChats];
     setChats(updatedChat);
     setIsLoading(false);
   };
 
-  const getGreeting = (currentTime: number): string => {
-    const dawnEnd = 4;
-    const morningEnd = 12;
-    const afternoonEnd = 18;
-
-    if (currentTime < dawnEnd) return goodDawn;
-    else if (currentTime < morningEnd) return goodMorning;
-    else if (currentTime < afternoonEnd) return goodAfternoon;
-    else return goodEvening;
-  };
-
-  const balanceChats = (array: ChatBubbleType[]) => {
-    let updatedChat = [...chats, ...array];
-    if (updatedChat.length > 10) {
-      updatedChat = updatedChat.slice(updatedChat.length - 10);
-      setIsSliced(true);
-    }
-    return updatedChat;
-  };
-
   const handleAsk = (data: Question) => {
-    const question = {
-      text: data.question,
-      position: "end",
-      lastBubble: true,
-    };
+    const question = generateChat(data.question, "end", true);
     chats.push(question);
     setIsLoading(true);
-
     const answer = answerChat.find((obj) => obj.id === data.id);
+
     if (answer) {
       setTimeout(() => {
-        const newChat = balanceChats(answer.answer);
+        const newChat = balanceChats(chats, answer.answer, () =>
+          setIsLoading(true)
+        );
         setChats(newChat);
         setIsLoading(false);
       }, 650);
@@ -150,22 +117,15 @@ const ChatRoom = () => {
         {isAsk ? (
           <div className="flex flex-row scroll-smooth flex-wrap">
             {questions.map((data, index) => (
-              <div
+              <BubbleQuestion
                 key={index}
-                className="py-2 px-3 rounded-xl text-xs whitespace-nowrap mr-2 mb-2 cursor-pointer shadow-sm ring-1 ring-inset ring-neutral hover:bg-neutral-content hover:text-neutral"
+                text={data.text}
                 onClick={() => handleAsk(data)}
-              >
-                {data.text}
-              </div>
+              />
             ))}
           </div>
         ) : (
-          <div
-            className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-neutral text-neutral-content px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-neutral hover:bg-neutral-content hover:text-neutral cursor-pointer"
-            onClick={() => setIsAsk(true)}
-          >
-            {tapHere}
-          </div>
+          <Button onClick={() => setIsAsk(true)} />
         )}
       </div>
     </>

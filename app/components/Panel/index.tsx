@@ -1,6 +1,6 @@
+import { AppProvider } from "./AppContext";
 import PanelIcons from "./PanelIcons";
 import ChatRoom from "./ChatRoom";
-import { AppProvider } from "./AppContext";
 import Divider from "../Divider";
 
 const Panel = () => {
