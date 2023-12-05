@@ -19,7 +19,9 @@ import {
   goodEvening,
   goodMorning,
   isTyping,
+  newChat,
   tapHere,
+  threeDots,
 } from "@/app/constants/labels";
 
 const ChatRoom = () => {
@@ -118,12 +120,14 @@ const ChatRoom = () => {
     <>
       <div className="flex flex-col gap-2 mt-8">
         {isSliced && (
-          <div className="flex flex-row justify-center text-primary">•••</div>
+          <div className="flex flex-row justify-center text-primary">
+            {threeDots}
+          </div>
         )}
-        {isLikeBtn && (
+        {(isLikeBtn || isShareBtn) && (
           <div className="flex flex-row justify-center">
             <div className="text-xs bg-primary text-primary-content rounded-lg py-1 px-2">
-              New Chat
+              {newChat}
             </div>
           </div>
         )}

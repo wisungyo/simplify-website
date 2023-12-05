@@ -156,12 +156,12 @@ export const likeResponse: ChatBubble[] = [
     lastBubble: false,
   },
   {
-    text: "Yahoo.. I’m glad you like it !!",
+    text: "Yeay.. I'm glad you like it !!",
     position: "start",
     lastBubble: false,
   },
   {
-    text: "Let me celebrate it by giving you quote of the day :",
+    text: "Let me celebrate it by giving you quote of the day ↓",
     position: "start",
     lastBubble: false,
   },

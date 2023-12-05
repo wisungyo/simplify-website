@@ -7,3 +7,4 @@ export const linkedin = "https://www.linkedin.com/in/wisungyo";
 export const github = "https://www.github.com/wisungyo";
 export const wisungyoComs = "https://wisungyo.com";
 export const wisungyoCom = "wisungyo.com";
+export const carousellGroup = "https://press.carousell.com/carousell-group/";
