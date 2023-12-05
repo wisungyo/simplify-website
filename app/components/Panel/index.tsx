@@ -6,11 +6,13 @@ import Divider from "../Divider";
 const Panel = () => {
   return (
     <>
-      <AppProvider>
-        <Divider />
-        <PanelIcons />
-        <ChatRoom />
-      </AppProvider>
+      <div className="block ">
+        <AppProvider>
+          <Divider />
+          <PanelIcons />
+          <ChatRoom />
+        </AppProvider>
+      </div>
     </>
   );
 };
