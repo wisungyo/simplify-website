@@ -7,18 +7,15 @@ import {
   IoChatbubbleEllipsesOutline,
   IoPaperPlane,
   IoPaperPlaneOutline,
-  IoSunnyOutline,
-  IoMoonOutline,
 } from "react-icons/io5";
-import { useState } from "react";
 import { IconPanel } from "@/app/constants/types";
 import { useAppContext } from "../AppContext";
+import { wisungyoCom } from "@/app/constants/links";
 import IconToggle from "@/app/components/IconToggle";
 import clipboardCopy from "clipboard-copy";
-import { wisungyoCom } from "@/app/constants/links";
+import ThemeSwitcher from "../../ThemeSwitcher";
 
 const PanelIcons = () => {
-  const [isDark, setIsDark] = useState<boolean>(false);
   const { isLikeBtn, isShareBtn, toggleLikeBtn, toggleShareBtn } =
     useAppContext();
 
@@ -33,10 +30,6 @@ const PanelIcons = () => {
     } catch (error) {
       console.error("Error copying to clipboard:", error);
     }
-  };
-
-  const handleDark = () => {
-    setIsDark(!isDark);
   };
 
   const panelIcons: IconPanel[] = [
@@ -77,21 +70,7 @@ const PanelIcons = () => {
             />
           ))}
         </div>
-        <label className="swap swap-rotate">
-          <input
-            type="checkbox"
-            className="theme-controller"
-            value="lemonade"
-            onClick={handleDark}
-          />
-          <IconToggle
-            name={"love"}
-            IconActive={IoMoonOutline}
-            IconInactive={IoSunnyOutline}
-            color="neutral"
-            isActive={isDark}
-          />
-        </label>
+        <ThemeSwitcher />
       </div>
     </>
   );

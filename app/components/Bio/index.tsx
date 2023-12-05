@@ -1,4 +1,4 @@
-import { bio, myEmail, toEmail } from "@/app/constants/labels";
+import { bio } from "@/app/constants/labels";
 import { carousellGroup } from "@/app/constants/links";
 
 const Bio = () => {

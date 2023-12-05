@@ -19,22 +19,18 @@ const ChatBubble = ({
     <>
       <div className={`flex flex-row ${stylesPoss} ${stylesLast}`}>
         <div className="max-w-[90%]">
-          <div>
-            <div
-              className={`inline-block rounded-[16px] border px-4 py-2 text-sm ${stylesBorder} ${stylesBg} ${stylesTextColor}`}
-            >
-              {type === "quote" && (
-                <p className="text-[10px] text-primary italic">
-                  {quoteOfTheDay}
-                </p>
-              )}
-              <p>{text}</p>
-              {type === "quote" && (
-                <p className="text-[10px] text-primary italic text-end">
-                  {wisungyoCom}
-                </p>
-              )}
-            </div>
+          <div
+            className={`inline-block rounded-[16px] border px-4 py-2 text-sm ${stylesBorder} ${stylesBg} ${stylesTextColor}`}
+          >
+            {type === "quote" && (
+              <p className="text-[10px] text-primary italic">{quoteOfTheDay}</p>
+            )}
+            <p>{text}</p>
+            {type === "quote" && (
+              <p className="text-[10px] text-primary italic text-end">
+                {wisungyoCom}
+              </p>
+            )}
           </div>
         </div>
       </div>

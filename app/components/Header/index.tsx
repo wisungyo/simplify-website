@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { fullname, occupation } from "@/app/constants/labels";
+import Image from "next/image";
 import Divider from "../Divider";
 
 const Header = () => {
