@@ -7,7 +7,7 @@ import Panel from "./components/Panel";
 export default function Home() {
   return (
     <>
-      <main className="mx-auto max-w-2xl px-4 py-8">
+      <main className="mx-auto max-w-lg px-4 py-8">
         <Header />
         <Bio />
         <Panel />
