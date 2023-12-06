@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/me-circle.png" width="200" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/me-circle.png" width="100" />
 </div>
 <h1 align="center">
   wisungyo.com - v1
