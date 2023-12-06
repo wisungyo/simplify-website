@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/main/public/images/me-circle.png" width="200" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/me-circle.png" width="200" />
 </div>
 <h1 align="center">
   wisungyo.com - v1
@@ -14,7 +14,7 @@
 </p>
 
 <div align="center">
-  <img alt="Demo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/main/public/images/demo.jpeg" />
+  <img alt="Demo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/demo.jpeg" />
 </div>
 
 ## 🛠 Installation & Set Up
