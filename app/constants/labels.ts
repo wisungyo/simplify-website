@@ -35,3 +35,5 @@ export const bringYouHome = "Let me bring you back home";
 export const letsGo = "Lets Go";
 export const newChat = "New Chat";
 export const threeDots = "•••";
+export const titleExperience = "-> Experience.";
+export const titleProjects = "-> Projects.";
