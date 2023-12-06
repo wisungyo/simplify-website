@@ -5,8 +5,10 @@ import React, { createContext, useContext, useState } from "react";
 interface AppContextProps {
   isLikeBtn: boolean;
   isShareBtn: boolean;
+  isChatBtn: boolean;
   toggleLikeBtn: () => void;
   toggleShareBtn: () => void;
+  toggleChatBtn: () => void;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -14,6 +16,7 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 export const AppProvider = ({ children }: any) => {
   const [isLikeBtn, setIsLikeBtn] = useState(false);
   const [isShareBtn, setIsShareBtn] = useState(false);
+  const [isChatBtn, setIsChatBtn] = useState(false);
 
   const toggleLikeBtn = () => {
     if (!isLikeBtn) {
@@ -33,11 +36,17 @@ export const AppProvider = ({ children }: any) => {
     }
   };
 
+  const toggleChatBtn = () => {
+    setIsChatBtn((prevState) => !prevState);
+  };
+
   const contextValue: AppContextProps = {
     isLikeBtn,
     toggleLikeBtn,
     isShareBtn,
     toggleShareBtn,
+    isChatBtn,
+    toggleChatBtn,
   };
 
   return (

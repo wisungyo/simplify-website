@@ -1,16 +1,19 @@
-import Bio from "./components/Bio";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Panel from "./components/Panel";
+import Bio from "@/app/components/Bio";
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import Panel from "@/app/components/Panel";
+import { AppProvider } from "@/app/AppContext";
 
 export default function Home() {
   return (
     <>
       <main className="mx-auto max-w-lg px-4 py-8">
-        <Header />
-        <Bio />
-        <Panel />
-        <Footer />
+        <AppProvider>
+          <Header />
+          <Bio />
+          <Panel />
+          <Footer />
+        </AppProvider>
       </main>
     </>
   );

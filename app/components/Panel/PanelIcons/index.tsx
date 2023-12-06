@@ -9,19 +9,21 @@ import {
   IoPaperPlaneOutline,
 } from "react-icons/io5";
 import { IconPanel } from "@/app/constants/types";
-import { useAppContext } from "../AppContext";
+import { useAppContext } from "@/app/AppContext";
 import { wisungyoCom } from "@/app/constants/links";
 import IconToggle from "@/app/components/IconToggle";
 import clipboardCopy from "clipboard-copy";
-import ThemeSwitcher from "../../ThemeSwitcher";
+import ThemeSwitcher from "@/app/components/ThemeSwitcher";
 
 const PanelIcons = () => {
-  const { isLikeBtn, isShareBtn, toggleLikeBtn, toggleShareBtn } =
-    useAppContext();
-
-  const handleLike = () => {
-    toggleLikeBtn();
-  };
+  const {
+    isLikeBtn,
+    isShareBtn,
+    isChatBtn,
+    toggleLikeBtn,
+    toggleShareBtn,
+    toggleChatBtn,
+  } = useAppContext();
 
   const handleShare = async () => {
     try {
@@ -38,13 +40,16 @@ const PanelIcons = () => {
       IconActive: IoHeart,
       IconInactive: IoHeartOutline,
       isActive: isLikeBtn,
-      onClick: handleLike,
+      onClick: toggleLikeBtn,
+      // isShow: isChatBtn,
     },
     {
       name: "chat",
       IconActive: IoChatbubbleEllipses,
       IconInactive: IoChatbubbleEllipsesOutline,
-      isActive: true,
+      isActive: isChatBtn,
+      onClick: toggleChatBtn,
+      // isShow: true,
     },
     {
       name: "share",
@@ -52,6 +57,7 @@ const PanelIcons = () => {
       IconInactive: IoPaperPlaneOutline,
       isActive: isShareBtn,
       onClick: handleShare,
+      // isShow: isChatBtn,
     },
   ];
 
@@ -67,6 +73,7 @@ const PanelIcons = () => {
               IconInactive={data.IconInactive}
               isActive={data.isActive}
               onClick={data.onClick}
+              isShow={data.isShow}
             />
           ))}
         </div>

@@ -10,7 +10,7 @@ import {
 } from "@/app/constants/values";
 import { callname, isTyping, newChat, threeDots } from "@/app/constants/labels";
 import { ChatBubble as ChatBubbleType, Question } from "@/app/constants/types";
-import { useAppContext } from "../AppContext";
+import { useAppContext } from "@/app/AppContext";
 import ChatBubble from "@/app/components/ChatBubble";
 import Button from "@/app/components/Button";
 import BubbleQuestion from "@/app/components/BubbleQuestion";

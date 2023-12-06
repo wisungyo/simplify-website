@@ -1,16 +1,19 @@
-import { AppProvider } from "./AppContext";
-import PanelIcons from "./PanelIcons";
-import ChatRoom from "./ChatRoom";
-import Divider from "../Divider";
+"use client";
+
+import { useAppContext } from "@/app/AppContext";
+import PanelIcons from "@/app/components/Panel/PanelIcons";
+import ChatRoom from "@/app/components/Panel/ChatRoom";
+import Divider from "@/app/components/Divider";
+import Profile from "@/app/components/Profile";
 
 const Panel = () => {
+  const { isChatBtn } = useAppContext();
+
   return (
     <>
-      <AppProvider>
-        <Divider />
-        <PanelIcons />
-        <ChatRoom />
-      </AppProvider>
+      <Divider />
+      <PanelIcons />
+      {isChatBtn ? <ChatRoom /> : <Profile />}
     </>
   );
 };

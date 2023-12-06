@@ -8,16 +8,23 @@ const IconToggle = ({
   isActive,
   onClick = () => {},
   size = "2em",
+  isShow = true,
 }: IconPanel) => {
   return (
     <>
-      <div onClick={onClick}>
-        {isActive ? (
-          <IconActive size={size} color={color} className="cursor-pointer" />
-        ) : (
-          <IconInactive size={size} color={color} className="cursor-pointer" />
-        )}
-      </div>
+      {isShow && (
+        <div onClick={onClick}>
+          {isActive ? (
+            <IconActive size={size} color={color} className="cursor-pointer" />
+          ) : (
+            <IconInactive
+              size={size}
+              color={color}
+              className="cursor-pointer"
+            />
+          )}
+        </div>
+      )}
     </>
   );
 };
