@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/main/public/images/me-circle.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/main/public/images/me-circle.png" width="200" />
 </div>
 <h1 align="center">
   wisungyo.com - v1
@@ -13,9 +13,9 @@
   </a>
 </p>
 
-[![Vercel Status](https://vercel.com/wisungyo/simplify-website/deployments/status)](https://vercel.com/wisungyo/simplify-website)
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img alt="Demo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/main/public/images/demo.jpeg" />
+</div>
 
 ## 🛠 Installation & Set Up
 
