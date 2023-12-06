@@ -1,6 +1,152 @@
-import { AnswerChatBubble, ChatBubble, Question, Quotes } from "./types";
+import {
+  AnswerChatBubble,
+  ChatBubble,
+  Profile,
+  Question,
+  Quotes,
+} from "@/app/constants/types";
 
 export const maxChats: number = 10;
+
+export const experience: Profile[] = [
+  {
+    id: "0",
+    title: "Mobile Developer",
+    company: "Laku6 (Carousell Group)",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    period: "2020 - Present",
+    stacks: [
+      {
+        id: "0",
+        name: "React Native",
+      },
+      {
+        id: "1",
+        name: "NextJS",
+      },
+      {
+        id: "2",
+        name: "Javascript",
+      },
+      {
+        id: "3",
+        name: "Typescript",
+      },
+    ],
+  },
+  {
+    id: "1",
+    title: "Android Developer",
+    company: "Binar Academy",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    period: "Jun - Sep 2020",
+    stacks: [
+      {
+        id: "0",
+        name: "Kotlin",
+      },
+      {
+        id: "1",
+        name: "Android Studio",
+      },
+      {
+        id: "2",
+        name: "Retrofit",
+      },
+      {
+        id: "3",
+        name: "Coroutine",
+      },
+    ],
+  },
+  {
+    id: "1",
+    title: "Front-end Developer",
+    company: "Binar Academy",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    period: "Mar - Jun 2020",
+    stacks: [
+      {
+        id: "0",
+        name: "React",
+      },
+      {
+        id: "1",
+        name: "Redux",
+      },
+    ],
+  },
+];
+
+export const projects: Profile[] = [
+  {
+    id: "0",
+    title: "Travada",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    stacks: [
+      {
+        id: "0",
+        name: "Kotlin",
+      },
+      {
+        id: "1",
+        name: "Android Studio",
+      },
+      {
+        id: "2",
+        name: "Retrofit",
+      },
+      {
+        id: "3",
+        name: "Coroutine",
+      },
+    ],
+  },
+  {
+    id: "0",
+    title: "RPS Mini Game",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    stacks: [
+      {
+        id: "0",
+        name: "Kotlin",
+      },
+      {
+        id: "1",
+        name: "Android Studio",
+      },
+      {
+        id: "2",
+        name: "Retrofit",
+      },
+      {
+        id: "3",
+        name: "Coroutine",
+      },
+    ],
+  },
+  {
+    id: "1",
+    title: "Bantu Belajar",
+    description:
+      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+    stacks: [
+      {
+        id: "0",
+        name: "React",
+      },
+      {
+        id: "1",
+        name: "React",
+      },
+    ],
+  },
+];
 
 export const initChats: ChatBubble[] = [
   {
@@ -34,13 +180,13 @@ export const questions: Question[] = [
   {
     id: "2",
     text: "Working experience? 👨🏻‍💻",
-    question: "May I know your current job and previous working experience?",
+    question: "Do you mind telling me your work experience?",
   },
-  {
-    id: "3",
-    text: "Your portfolio? ⭐️",
-    question: "Looks interesting already. Show me your work, Wisnu 😁",
-  },
+  // {
+  //   id: "3",
+  //   text: "Your portfolio? ⭐️",
+  //   question: "Looks interesting already. Show me your work, Wisnu 😁",
+  // },
   {
     id: "4",
     text: "Hmm, let's work together! 🔥",
@@ -78,7 +224,7 @@ export const answerChat: AnswerChatBubble[] = [
         lastBubble: false,
       },
       {
-        text: "Mastering React Native, React, Next.js, and Git. Working wonders with REST APIs, diving into ES7, JavaScript, and TypeScript is all in a day's work.",
+        text: "Mastering React Native, React, Next.js, and Git. Working wonders with REST APIs, diving into ES6+, JavaScript, and TypeScript is all in a day's work.",
         position: "start",
         lastBubble: false,
       },
@@ -93,7 +239,7 @@ export const answerChat: AnswerChatBubble[] = [
     id: "2",
     answer: [
       {
-        text: "Currently I am working as a Mobile Developer for tech company in Jakarta",
+        text: "Sure! Currently, I am working as a Mobile Developer for tech company in Jakarta, named Laku6.",
         position: "start",
         lastBubble: false,
       },
@@ -103,7 +249,7 @@ export const answerChat: AnswerChatBubble[] = [
         lastBubble: false,
       },
       {
-        text: "Anyway, this is also my first job since I graduated.",
+        text: "May Allah always guide and help me in everything 🤲",
         position: "start",
         lastBubble: true,
       },

@@ -1,6 +1,6 @@
 import { footer } from "@/app/constants/labels";
-import FooterIcons from "./FooterIcons";
-import Divider from "../Divider";
+import FooterIcons from "@/app/components/Footer/FooterIcons";
+import Divider from "@/app/components/Divider";
 
 const Footer = () => {
   return (

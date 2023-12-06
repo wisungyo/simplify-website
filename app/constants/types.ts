@@ -12,6 +12,7 @@ export type IconPanel = {
   isActive: boolean;
   onClick?: any;
   size?: string;
+  isShow?: boolean;
 };
 
 export type ChatBubble = {
@@ -38,4 +39,18 @@ export type Quotes = {
   text: string;
   category: string;
   author?: string;
+};
+
+export type Stack = {
+  id: string;
+  name: string;
+};
+
+export type Profile = {
+  id: string;
+  title: string;
+  company?: string;
+  description: string;
+  period?: string;
+  stacks: Stack[];
 };

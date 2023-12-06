@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
-import IconToggle from "../IconToggle";
+import IconToggle from "@/app/components/IconToggle";
 
 const ThemeSwitcher = () => {
   const [isDark, setIsDark] = useState<boolean>(false);
