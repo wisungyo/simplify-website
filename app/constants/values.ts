@@ -14,7 +14,7 @@ export const experience: Profile[] = [
     title: "Mobile Developer",
     company: "Laku6 (Carousell Group)",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Develop, maintain, and ship high-quality, robust production code for several mobile apps, while occasionally working on SDK & web-based products.",
     period: "2020 - Present",
     stacks: [
       {
@@ -37,10 +37,10 @@ export const experience: Profile[] = [
   },
   {
     id: "1",
-    title: "Android Developer",
+    title: "Android Engineer",
     company: "Binar Academy",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Worked along side with UI team and other engineers to develop collaborative finance Android app.",
     period: "Jun - Sep 2020",
     stacks: [
       {
@@ -66,7 +66,7 @@ export const experience: Profile[] = [
     title: "Front-end Developer",
     company: "Binar Academy",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Developed and styled official website of Bantu Belajar, a product with intention to develop comunity literacy.",
     period: "Mar - Jun 2020",
     stacks: [
       {
@@ -86,7 +86,7 @@ export const projects: Profile[] = [
     id: "0",
     title: "Travada",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Mobile banking app which helps groups of millenial to save their money collectively and plans for their dream group vacation.",
     stacks: [
       {
         id: "0",
@@ -110,7 +110,7 @@ export const projects: Profile[] = [
     id: "0",
     title: "RPS Mini Game",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Fun mini multiplayer game to play in a free time. Written fully native using Kotlin.",
     stacks: [
       {
         id: "0",
@@ -134,7 +134,7 @@ export const projects: Profile[] = [
     id: "1",
     title: "Bantu Belajar",
     description:
-      "Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov Lorem ipsum dolov.",
+      "Crowdfunding web app which supports and develops comunity literacy, like comunity reading centers and libraries.",
     stacks: [
       {
         id: "0",
@@ -142,7 +142,7 @@ export const projects: Profile[] = [
       },
       {
         id: "1",
-        name: "React",
+        name: "Redux",
       },
     ],
   },
