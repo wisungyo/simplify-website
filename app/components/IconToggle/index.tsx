@@ -4,7 +4,8 @@ const IconToggle = ({
   name,
   IconActive,
   IconInactive,
-  color = "neutral",
+  colorActive = "text-base",
+  colorInactive = "text-base",
   isActive,
   onClick = () => {},
   size = "2em",
@@ -13,14 +14,16 @@ const IconToggle = ({
   return (
     <>
       {isShow && (
-        <div onClick={onClick}>
+        <div id={name} onClick={onClick}>
           {isActive ? (
-            <IconActive size={size} color={color} className="cursor-pointer" />
+            <IconActive
+              size={size}
+              className={`cursor-pointer ${colorActive}`}
+            />
           ) : (
             <IconInactive
               size={size}
-              color={color}
-              className="cursor-pointer"
+              className={`cursor-pointer ${colorInactive}`}
             />
           )}
         </div>
