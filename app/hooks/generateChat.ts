@@ -4,8 +4,8 @@ const generateChat = (
   text: string,
   position: string,
   lastBubble: boolean,
-  size: string = "",
-  type: string = ""
+  type: string = "",
+  size: string = ""
 ): ChatBubble => {
   return {
     text,
