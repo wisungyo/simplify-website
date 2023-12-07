@@ -71,9 +71,10 @@ const ChatRoom = () => {
 
     if (answer) {
       setTimeout(() => {
-        const newChat = balanceChats(chats, answer.answer, () =>
-          setIsLoading(true)
-        );
+        const newChat = balanceChats(chats, answer.answer, () => {
+          setIsLoading(true);
+          setIsSliced(true);
+        });
         setChats(newChat);
         setIsLoading(false);
       }, 650);
