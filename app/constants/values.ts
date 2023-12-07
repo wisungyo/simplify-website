@@ -1,6 +1,7 @@
 import {
   AnswerChatBubble,
   ChatBubble,
+  Competition,
   Profile,
   Question,
   Quotes,
@@ -15,7 +16,8 @@ export const experience: Profile[] = [
     company: "Laku6 (Carousell Group)",
     description:
       "Develop, maintain, and ship high-quality, robust production code for several mobile apps, while occasionally working on SDK & web-based products.",
-    period: "2020 - Present",
+    period: "2020 — PRESENT",
+    url: "https://www.laku6.com/",
     stacks: [
       {
         id: "0",
@@ -41,7 +43,8 @@ export const experience: Profile[] = [
     company: "Binar Academy",
     description:
       "Worked along side with UI team and other engineers to develop collaborative finance Android app.",
-    period: "Jun - Sep 2020",
+    period: "JUNE — SEP 2020",
+    url: "https://www.binaracademy.com/",
     stacks: [
       {
         id: "0",
@@ -67,7 +70,8 @@ export const experience: Profile[] = [
     company: "Binar Academy",
     description:
       "Developed and styled official website of Bantu Belajar, a product with intention to develop comunity literacy.",
-    period: "Mar - Jun 2020",
+    period: "MAR — JUNE 2020",
+    url: "https://www.binaracademy.com/",
     stacks: [
       {
         id: "0",
@@ -83,34 +87,28 @@ export const experience: Profile[] = [
 
 export const projects: Profile[] = [
   {
-    id: "0",
-    title: "Travada",
+    id: "3",
+    title: "wisungyo.com",
     description:
-      "Mobile banking app which helps groups of millenial to save their money collectively and plans for their dream group vacation.",
+      "Portfolio site designed and coded from scratch to showcase my skills and past works.",
+    url: "#me",
     stacks: [
       {
         id: "0",
-        name: "Kotlin",
+        name: "NextJS - App Router",
       },
       {
         id: "1",
-        name: "Android Studio",
-      },
-      {
-        id: "2",
-        name: "Retrofit",
-      },
-      {
-        id: "3",
-        name: "Coroutine",
+        name: "Typescript",
       },
     ],
   },
   {
-    id: "0",
-    title: "RPS Mini Game",
+    id: "2",
+    title: "Travada",
     description:
-      "Fun mini multiplayer game to play in a free time. Written fully native using Kotlin.",
+      "Mobile banking app which helps groups of millenial to save their money collectively and plans for their dream group vacation.",
+    url: "https://github.com/wisungyo/Travada",
     stacks: [
       {
         id: "0",
@@ -132,9 +130,35 @@ export const projects: Profile[] = [
   },
   {
     id: "1",
+    title: "RPS Mini Game",
+    description:
+      "Fun mini multiplayer game to play in a free time. Written fully native using Kotlin.",
+    url: "https://github.com/wisungyo/android-rock-paper-scissors",
+    stacks: [
+      {
+        id: "0",
+        name: "Kotlin",
+      },
+      {
+        id: "1",
+        name: "Android Studio",
+      },
+      {
+        id: "2",
+        name: "Retrofit",
+      },
+      {
+        id: "3",
+        name: "Coroutine",
+      },
+    ],
+  },
+  {
+    id: "0",
     title: "Bantu Belajar",
     description:
       "Crowdfunding web app which supports and develops comunity literacy, like comunity reading centers and libraries.",
+    url: "https://github.com/wisungyo/crowdfunding-web-app-frontend",
     stacks: [
       {
         id: "0",
@@ -145,6 +169,81 @@ export const projects: Profile[] = [
         name: "Redux",
       },
     ],
+  },
+];
+
+export const competitions: Competition[] = [
+  {
+    id: "7",
+    title: "National Business Plan Competition",
+    description: "",
+    place: "State University of Riau",
+    honor: "1st",
+    type: "business",
+    date: "April 2019",
+  },
+  {
+    id: "6",
+    title: "National Business Plan Competition",
+    description: "",
+    place: "Indonesian Islamic University",
+    honor: "1st",
+    type: "business",
+    date: "March 2019",
+  },
+  {
+    id: "5",
+    title: "National Business Plan Competition",
+    description: "",
+    place: "Sultan Ageng Tirtayasa University",
+    honor: "2nd",
+    type: "business",
+    date: "March 2019",
+  },
+  {
+    id: "4",
+    title: "National Business Plan Competition",
+    description: "",
+    place: "Atma Jaya Jakarta University",
+    honor: "3rd",
+    type: "business",
+    date: "March 2019",
+  },
+  {
+    id: "3",
+    title: "National Business Plan Competition",
+    description: "",
+    place: "State University of Jember",
+    honor: "3rd",
+    type: "business",
+    date: "November 2018",
+  },
+  {
+    id: "2",
+    title: "National Business Plan Project Competition",
+    description: "",
+    place: "Semen Indonesia International University",
+    honor: "1st",
+    type: "paper",
+    date: "October 2018",
+  },
+  {
+    id: "1",
+    title: "National Scientific Competition",
+    description: "",
+    place: "State University of Sebelas Maret",
+    honor: "2nd",
+    type: "paper",
+    date: "March 2018",
+  },
+  {
+    id: "0",
+    title: "National Scientific Work Competition",
+    description: "",
+    place: "Trunojoyo Madura University",
+    honor: "2nd",
+    type: "paper",
+    date: "October 2017",
   },
 ];
 

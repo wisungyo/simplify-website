@@ -14,6 +14,7 @@ import { wisungyoCom } from "@/app/constants/links";
 import IconToggle from "@/app/components/IconToggle";
 import clipboardCopy from "clipboard-copy";
 import ThemeSwitcher from "@/app/components/ThemeSwitcher";
+import animateBeating from "@/app/hooks/animateBeating";
 
 const PanelIcons = () => {
   const {
@@ -41,7 +42,7 @@ const PanelIcons = () => {
       IconInactive: IoHeartOutline,
       isActive: isLikeBtn,
       onClick: toggleLikeBtn,
-      // isShow: isChatBtn,
+      colorActive: "text-primary",
     },
     {
       name: "chat",
@@ -49,7 +50,6 @@ const PanelIcons = () => {
       IconInactive: IoChatbubbleEllipsesOutline,
       isActive: isChatBtn,
       onClick: toggleChatBtn,
-      // isShow: true,
     },
     {
       name: "share",
@@ -57,9 +57,15 @@ const PanelIcons = () => {
       IconInactive: IoPaperPlaneOutline,
       isActive: isShareBtn,
       onClick: handleShare,
-      // isShow: isChatBtn,
     },
   ];
+
+  const onLoveClick = (action: () => void) => {
+    if (!isLikeBtn) {
+      action();
+      animateBeating("love");
+    }
+  };
 
   return (
     <>
@@ -71,8 +77,13 @@ const PanelIcons = () => {
               name={data.name}
               IconActive={data.IconActive}
               IconInactive={data.IconInactive}
+              colorActive={data.colorActive}
               isActive={data.isActive}
-              onClick={data.onClick}
+              onClick={
+                data.name === "love"
+                  ? () => onLoveClick(data.onClick)
+                  : data.onClick
+              }
               isShow={data.isShow}
             />
           ))}

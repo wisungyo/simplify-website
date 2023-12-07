@@ -21,10 +21,9 @@ const ThemeSwitcher = () => {
           onClick={handleDark}
         />
         <IconToggle
-          name={"love"}
+          name={"themeSwitcher"}
           IconActive={IoMoonOutline}
           IconInactive={IoSunnyOutline}
-          color="neutral"
           isActive={isDark}
         />
       </label>

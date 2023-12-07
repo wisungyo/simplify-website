@@ -1,4 +1,4 @@
-import { bio } from "@/app/constants/labels";
+import { aboutMe, bio, laku6Carousell } from "@/app/constants/labels";
 import { carousellGroup } from "@/app/constants/links";
 
 const Bio = () => {
@@ -7,11 +7,14 @@ const Bio = () => {
   return (
     <>
       <div className="py-4 gap-2">
-        <span>
+        <p id="aboutme" className="text-lg font-bold text-primary mb-4">
+          {aboutMe}
+        </p>
+        <span className="leading-6">
           {year}
           {bio}
           <a href={carousellGroup}>
-            <span className="text-primary"> Laku6 (Carousell Group)</span>.
+            <span className="text-primary">{laku6Carousell}</span>.
           </a>
         </span>
       </div>

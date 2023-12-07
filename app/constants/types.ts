@@ -8,7 +8,8 @@ export type IconPanel = {
   name: string;
   IconActive: React.ElementType;
   IconInactive: React.ElementType;
-  color?: string;
+  colorActive?: string;
+  colorInactive?: string;
   isActive: boolean;
   onClick?: any;
   size?: string;
@@ -52,5 +53,16 @@ export type Profile = {
   company?: string;
   description: string;
   period?: string;
+  url?: string;
   stacks: Stack[];
+};
+
+export type Competition = {
+  id: string;
+  title: string;
+  description: string;
+  place: string;
+  honor: string;
+  date: string;
+  type: "business" | "paper";
 };
