@@ -15,7 +15,7 @@ const ProfileCard = (props: IProfileCard) => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 py-4 my-6">
+      <div className="flex flex-col gap-2 py-4 my-6 md:px-4 md:ring-1 md:ring-neutral md:rounded-lg">
         {period && <p className="text-xs mb-2">{period}</p>}
         <a href={url}>
           <span className="hover:text-primary flex flex-wrap gap-[2px] items-center">
@@ -30,7 +30,7 @@ const ProfileCard = (props: IProfileCard) => {
           {stacks.map((data) => (
             <div
               key={data.id}
-              className="rounded-2xl p-2 text-xs ring-1 ring-neutral"
+              className="rounded-2xl px-3 py-2 text-xs ring-1 ring-neutral"
             >
               {data.name}
             </div>

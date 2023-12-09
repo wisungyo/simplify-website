@@ -2,12 +2,36 @@ import {
   AnswerChatBubble,
   ChatBubble,
   Competition,
+  Navigation,
   Profile,
   Question,
   Quotes,
 } from "@/app/constants/types";
 
 export const maxChats: number = 10;
+
+export const navigation: Navigation[] = [
+  {
+    name: "About",
+    url: "aboutme",
+    isActive: true,
+  },
+  {
+    name: "Experience",
+    url: "experience",
+    isActive: false,
+  },
+  {
+    name: "Projects",
+    url: "projects",
+    isActive: false,
+  },
+  {
+    name: "Awards",
+    url: "awards",
+    isActive: false,
+  },
+];
 
 export const experience: Profile[] = [
   {
@@ -95,7 +119,7 @@ export const projects: Profile[] = [
     stacks: [
       {
         id: "0",
-        name: "NextJS - App Router",
+        name: "NextJS",
       },
       {
         id: "1",
