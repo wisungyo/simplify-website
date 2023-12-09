@@ -5,8 +5,10 @@ import ProfileCard from "@/app/components/Cards/ProfileCard";
 import Awards from "@/app/components/Awards";
 
 const Profile = () => {
-  const sectionHead = (title: string) => (
-    <p className="text-lg font-bold text-primary">{title}</p>
+  const sectionHead = (id: string, title: string) => (
+    <p id={id} className="text-lg font-bold text-primary">
+      {title}
+    </p>
   );
 
   return (
@@ -14,7 +16,7 @@ const Profile = () => {
       <div>
         <Divider />
         <div className="mt-6">
-          {sectionHead(titleExperience)}
+          {sectionHead("experience", titleExperience)}
           <div>
             {experience.map((data, index) => (
               <ProfileCard
@@ -31,7 +33,7 @@ const Profile = () => {
         </div>
         <Divider />
         <div className="mt-6">
-          {sectionHead(titleProjects)}
+          {sectionHead("projects", titleProjects)}
           <div>
             {projects.map((data, index) => (
               <ProfileCard
@@ -46,7 +48,7 @@ const Profile = () => {
         </div>
         <Divider />
         <div className="mt-6">
-          {sectionHead("Awards.")}
+          {sectionHead("awards", "Awards.")}
           <Awards />
         </div>
       </div>

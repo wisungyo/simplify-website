@@ -1,3 +1,9 @@
+export type Navigation = {
+  name: string;
+  url: string;
+  isActive: boolean;
+};
+
 export type IconFooter = {
   link: string;
   IconComponent: React.ElementType;

@@ -11,8 +11,8 @@ const Panel = () => {
 
   return (
     <>
-      <Divider />
-      <PanelIcons />
+      {/* <Divider /> */}
+      {/* <PanelIcons /> */}
       {isChatBtn ? <ChatRoom /> : <Profile />}
     </>
   );

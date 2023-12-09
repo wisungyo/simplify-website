@@ -13,6 +13,8 @@ export const darkPrimary = "#FF79C6";
 export const darkSecondary = "#BD93F9";
 export const darkAccent = "#FAB86D";
 export const darkNeutral = "#424559";
+export const darkerBase = "#81817E";
+
 export const lightPrimary = "#66CC8A";
 export const lightSecondary = "#377CFB";
 export const lightAccent = "#F68067";

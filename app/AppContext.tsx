@@ -1,14 +1,22 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 
 interface AppContextProps {
   isLikeBtn: boolean;
   isShareBtn: boolean;
   isChatBtn: boolean;
+  active: string;
   toggleLikeBtn: () => void;
   toggleShareBtn: () => void;
   toggleChatBtn: () => void;
+  setActive: Dispatch<SetStateAction<string>>;
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
@@ -17,6 +25,7 @@ export const AppProvider = ({ children }: any) => {
   const [isLikeBtn, setIsLikeBtn] = useState(false);
   const [isShareBtn, setIsShareBtn] = useState(false);
   const [isChatBtn, setIsChatBtn] = useState(false);
+  const [active, setActive] = useState<string>("aboutme");
 
   const toggleLikeBtn = () => {
     if (!isLikeBtn) {
@@ -42,11 +51,13 @@ export const AppProvider = ({ children }: any) => {
 
   const contextValue: AppContextProps = {
     isLikeBtn,
-    toggleLikeBtn,
     isShareBtn,
-    toggleShareBtn,
     isChatBtn,
+    active,
+    toggleLikeBtn,
+    toggleShareBtn,
     toggleChatBtn,
+    setActive,
   };
 
   return (
