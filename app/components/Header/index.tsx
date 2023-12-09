@@ -14,6 +14,7 @@ const Header = () => {
               src={"/images/profile.jpeg"}
               className="rounded-full hover:opacity-70 transition-opacity duration-300"
               sizes="(max-width: 128px), (max-height: 128px)"
+              priority={true}
               fill
             />
             <div className="absolute top-0 left-0 w-full h-full bg-pink-500 opacity-0 hover:opacity-70 transition-opacity rounded-full duration-300"></div>

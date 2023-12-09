@@ -11,7 +11,12 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "@/app/AppContext";
 
 const HeaderLarge = () => {
-  const initialScrolled = localStorage.getItem("scrolled") === "true" || false;
+  const isLocalStorageAvailable = typeof localStorage !== "undefined";
+
+  const initialScrolled = isLocalStorageAvailable
+    ? localStorage.getItem("scrolled") === "true" || false
+    : false;
+
   const { setActive } = useAppContext();
   const [scrolled, setScrolled] = useState(initialScrolled);
 
@@ -25,6 +30,8 @@ const HeaderLarge = () => {
       } else {
         setScrolled(false);
       }
+
+      localStorage.setItem("scrolled", scrolled.toString());
 
       const aboutSection = document.getElementById("aboutme")?.offsetTop;
       const experienceSection =
@@ -51,7 +58,7 @@ const HeaderLarge = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrolled]);
 
   return (
     <>
