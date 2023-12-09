@@ -15,14 +15,22 @@ export default function Home() {
       <AppProvider>
         <main className="mx-auto max-w-6xl px-4 py-8">
           <div className="flex flex-row gap-12">
-            <div className="hidden md:block flex-1 relative">
-              <div className="fixed flex flex-col gap-16 ">
-                <FadeInRight delay={0}>
-                  <HeaderLarge />
-                </FadeInRight>
-                <FadeInRight delay={0.4}>
-                  <Navigation />
-                </FadeInRight>
+            <div
+              className="hidden md:block flex-1 relative"
+              style={{ maxHeight: "calc(100vh - 100px)" }}
+            >
+              <div
+                className="fixed flex flex-col justify-between gap-4"
+                style={{ height: "calc(100vh - 100px)" }}
+              >
+                <div className="flex flex-col gap-16">
+                  <FadeInRight delay={0}>
+                    <HeaderLarge />
+                  </FadeInRight>
+                  <FadeInRight delay={0.4}>
+                    <Navigation />
+                  </FadeInRight>
+                </div>
                 <FadeInRight delay={0.6}>
                   <FooterIcons align="justify-start" gap="gap-8" />
                 </FadeInRight>

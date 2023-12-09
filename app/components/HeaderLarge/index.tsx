@@ -11,8 +11,9 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "@/app/AppContext";
 
 const HeaderLarge = () => {
+  const initialScrolled = localStorage.getItem("scrolled") === "true" || false;
   const { setActive } = useAppContext();
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(initialScrolled);
 
   useEffect(() => {
     const handleScroll = () => {
