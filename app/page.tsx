@@ -17,11 +17,11 @@ export default function Home() {
           <div className="flex flex-row gap-12">
             <div
               className="hidden md:block flex-1 relative"
-              style={{ maxHeight: "calc(100vh - 100px)" }}
+              style={{ maxHeight: "calc(100dvh - 100px)" }}
             >
               <div
                 className="fixed flex flex-col justify-between gap-4"
-                style={{ height: "calc(100vh - 100px)" }}
+                style={{ height: "calc(100dvh - 100px)" }}
               >
                 <div className="flex flex-col gap-16">
                   <FadeInRight delay={0}>
