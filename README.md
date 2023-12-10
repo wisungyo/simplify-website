@@ -7,14 +7,9 @@
 <p align="center">
   The first iteration of <a href="https://wisungyo.com" target="_blank">wisungyo.com</a> built with <a href="https://www.nextjs.org/" target="_blank">NextJS</a> and hosted with <a href="https://www.vercel.com/" target="_blank">Vercel</a>
 </p>
-<p align="center">
-  <a href="https://vercel.com/wisungyo/simplify-website" target="_blank">
-    <img src="https://vercel.com/wisungyo/simplify-website/deployments/status" alt="Vercel Status" />
-  </a>
-</p>
 
 <div align="center">
-  <img alt="Demo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/demo.jpeg" />
+  <img alt="Demo" src="https://raw.githubusercontent.com/wisungyo/simplify-website/master/public/images/demo.png" />
 </div>
 
 ## 🛠 Installation & Set Up
