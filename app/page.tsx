@@ -10,6 +10,11 @@ import Profile from "@/app/components/Profile";
 import FadeIn from "@/app/components/FadeIn";
 import FadeInRight from "@/app/components/FadeInRight";
 import StructuredData from "@/app/components/StructuredData";
+import dynamic from "next/dynamic";
+
+const NoSSR = dynamic(() => import("@/app/components/HeaderLarge"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -28,7 +33,8 @@ export default function Home() {
               >
                 <div className="flex flex-col gap-16">
                   <FadeInRight delay={0}>
-                    <HeaderLarge />
+                    {/* <HeaderLarge /> */}
+                    <NoSSR />
                   </FadeInRight>
                   <FadeInRight delay={0.4}>
                     <Navigation />
