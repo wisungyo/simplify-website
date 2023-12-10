@@ -19,12 +19,12 @@ const ProfileCard = (props: IProfileCard) => {
         <div className="flex flex-col gap-4 py-4 my-6 px-4 ring-1 ring-neutral rounded-lg group hover:bg-[#2F313F] md:hover:cursor-pointer">
           {period && <p className="text-xs text-[#81817E] mb-2">{period}</p>}
           <div className="group-hover:text-primary flex flex-wrap gap-[2px] items-center">
-            <div className="inline-flex flex-row gap-2">
+            <div className="inline-flex flex-row gap-2 items-center">
               <h2 className="text-sm font-semibold">{title}</h2>
               {company && (
                 <>
                   <span>•</span>
-                  <h2>{company}</h2>
+                  <h2 className="text-sm font-semibold">{company}</h2>
                 </>
               )}
             </div>

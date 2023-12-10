@@ -3,7 +3,6 @@ import { jsonLD } from "@/app/constants/values";
 import Bio from "@/app/components/Bio";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import HeaderLarge from "@/app/components/HeaderLarge";
 import Navigation from "@/app/components/Navigation";
 import FooterIcons from "@/app/components/Footer/FooterIcons";
 import Profile from "@/app/components/Profile";
