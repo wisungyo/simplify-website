@@ -111,7 +111,7 @@ export const experience: Profile[] = [
 
 export const projects: Profile[] = [
   {
-    id: "3",
+    id: "4",
     title: "wisungyo.com",
     description:
       "Portfolio site designed and coded from scratch to showcase my skills and past works.",
@@ -124,6 +124,39 @@ export const projects: Profile[] = [
       {
         id: "1",
         name: "Typescript",
+      },
+      {
+        id: "2",
+        name: "Tailwind",
+      },
+      {
+        id: "3",
+        name: "Former Motion",
+      },
+    ],
+  },
+  {
+    id: "3",
+    title: "Anime Vault",
+    description:
+      "Anime Vault website which shows bunch of anime list together with its rating and other info, which is coming from real API.",
+    url: "https://anime-vault-roan.vercel.app/",
+    stacks: [
+      {
+        id: "0",
+        name: "NextJS",
+      },
+      {
+        id: "1",
+        name: "Typescript",
+      },
+      {
+        id: "2",
+        name: "Tailwind",
+      },
+      {
+        id: "3",
+        name: "Former Motion",
       },
     ],
   },
