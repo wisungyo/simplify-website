@@ -34,23 +34,25 @@ const Navigation = () => {
     <>
       <div className="flex flex-col gap-3">
         {navigation.map((data, index) => (
-          <div key={index} className="flex flex-row items-center gap-3">
-            <div
-              className={`h-[1px] ${
-                data.url === active
-                  ? "w-20 bg-primary"
-                  : "w-8 bg-neutral-content"
-              }`}
-            />
-            <div
-              className={`text-xs uppercase hover:cursor-pointer py-1 ${
-                data.url === active && "text-primary"
-              }`}
-              onClick={() => handleScroll(data.url)}
-            >
-              {data.name}
+          <span key={index} className="flex">
+            <div className="group flex flex-row items-center gap-3">
+              <div
+                className={`h-[1px] ${
+                  data.url === active
+                    ? "w-20 bg-primary"
+                    : "w-8 bg-neutral-content"
+                } transition-all duration-200 group-hover:w-20 group-hover:bg-primary group-hover:cursor-pointer`}
+              />
+              <div
+                className={`text-xs uppercase py-1 ${
+                  data.url === active && "text-primary"
+                } group-hover:text-primary transition-all duration-200 group-hover:cursor-pointer`}
+                onClick={() => handleScroll(data.url)}
+              >
+                {data.name}
+              </div>
             </div>
-          </div>
+          </span>
         ))}
       </div>
     </>
