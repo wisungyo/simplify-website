@@ -67,7 +67,7 @@ const HeaderLarge = () => {
           <span className="text-4xl font-bold leading-snug text-primary my-10">
             {helloIam}
           </span>
-          <h1
+          <h2
             id="fullname"
             className={`font-bold text-5xl lg:text-6xl leading-tight `}
           >
@@ -80,7 +80,7 @@ const HeaderLarge = () => {
               {scrolled ? "" : `${agung} `}
             </span>
             <span>{prasetyo}</span>
-          </h1>
+          </h2>
           <h2
             id="fullname"
             className="font-bold text-4xl lg:text-5xl leading-tight text-[#81817E] mt-4"
