@@ -44,12 +44,12 @@ const Navigation = () => {
                   data.url === active
                     ? "w-20 bg-primary"
                     : "w-8 bg-neutral-content"
-                } transition-all duration-200 group-hover:w-20 group-hover:bg-primary`}
+                } transition-all duration-200 group-hover:w-20`}
               />
               <div
                 className={`text-xs uppercase py-1 ${
                   data.url === active && "text-primary"
-                } group-hover:text-primary transition-all duration-200`}
+                } transition-all duration-200`}
               >
                 {data.name}
               </div>

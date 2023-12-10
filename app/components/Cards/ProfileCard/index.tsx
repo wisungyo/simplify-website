@@ -18,18 +18,18 @@ const ProfileCard = (props: IProfileCard) => {
       <a href={url}>
         <div className="flex flex-col gap-4 py-4 my-6 px-4 ring-1 ring-neutral rounded-lg group hover:bg-[#2F313F] md:hover:cursor-pointer">
           {period && <p className="text-xs text-[#81817E] mb-2">{period}</p>}
-          <span className="group-hover:text-primary flex flex-wrap gap-[2px] items-center">
-            <span className="text-sm font-semibold inline-flex flex-row gap-2">
-              {title}
+          <div className="group-hover:text-primary flex flex-wrap gap-[2px] items-center">
+            <div className="inline-flex flex-row gap-2">
+              <h2 className="text-sm font-semibold">{title}</h2>
               {company && (
                 <>
                   <span>•</span>
-                  <span>{company}</span>
+                  <h2>{company}</h2>
                 </>
               )}
-            </span>
+            </div>
             <GoArrowUpRight size="1rem" />
-          </span>
+          </div>
           <p className="text-sm">{description}</p>
           <div className="flex flex-row flex-wrap gap-2 mt-2">
             {stacks.map((data) => (

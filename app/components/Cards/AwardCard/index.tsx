@@ -30,7 +30,7 @@ const AwardCard = ({ title, place, honor, date }: IAwardCard) => {
           <p className="text-sm font-bold text-primary">{honor}</p>
         </div>
         <div className="flex flex-col justify-between">
-          <div className="text-sm">{place}</div>
+          <h3 className="text-sm">{place}</h3>
           <div className="flex flex-row gap-2 text-xs">
             <span className="text-primary">{getHonorText(honor)}</span>
             <span>•</span>

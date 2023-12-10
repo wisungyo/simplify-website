@@ -7,6 +7,8 @@ import {
   Question,
   Quotes,
 } from "@/app/constants/types";
+import { description, fullname, occupation } from "./labels";
+import { wisungyoComs } from "./links";
 
 export const maxChats: number = 10;
 
@@ -68,10 +70,10 @@ export const experience: Profile[] = [
   },
   {
     id: "1",
-    title: "Android Engineer",
+    title: "Android Developer",
     company: "Binar Academy",
     description:
-      "Worked along side with UI team and other engineers to develop collaborative finance Android app.",
+      "Worked along side with UI team and other developers to develop collaborative finance Android app.",
     period: "JUNE — SEP 2020",
     url: "https://www.binaracademy.com/en/about",
     stacks: [
@@ -592,3 +594,65 @@ export const quotes: Quotes[] = [
     author: "",
   },
 ];
+
+export const jsonLD = {
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  name: fullname,
+  description: description,
+  occupation: {
+    "@type": "Product",
+    name: occupation,
+  },
+  website: {
+    "@type": "Brand",
+    name: "wisungyo",
+    url: wisungyoComs,
+  },
+};
+
+export const metaData = {
+  metadataBase: new URL(wisungyoComs),
+  title: fullname,
+  description: description,
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "de-DE": "/de-DE",
+    },
+  },
+  openGraph: {
+    title: fullname,
+    description: description,
+    url: wisungyoComs,
+    siteName: fullname,
+    images: [
+      {
+        url: "https://wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75",
+        width: 256,
+        height: 256,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  // robots: {
+  //   index: false,
+  //   follow: true,
+  //   nocache: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: false,
+  //     noimageindex: true,
+  //     "max-video-preview": -1,
+  //     "max-image-preview": "large",
+  //     "max-snippet": -1,
+  //   },
+  // },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+};

@@ -79,10 +79,7 @@ const HeaderLarge = () => {
             >
               {scrolled ? "" : `${agung} `}
             </span>
-            <span>
-              {prasetyo}
-              {"."}
-            </span>
+            <span>{prasetyo}</span>
           </h1>
           <h2
             id="fullname"

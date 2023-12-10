@@ -1,65 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import { fullname, description, occupation } from "@/app/constants/labels";
-import { wisungyoComs } from "@/app/constants/links";
+import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { jsonLD, metaData } from "./constants/values";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(wisungyoComs),
-  title: fullname,
-  description: description,
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-      "de-DE": "/de-DE",
-    },
-  },
-  openGraph: {
-    title: fullname,
-    description: description,
-    url: wisungyoComs,
-    siteName: fullname,
-    images: [
-      {
-        url: "https://wisungyo.com/_next/image?url=%2Fimages%2Fprofile.jpeg&w=256&q=75",
-        width: 256,
-        height: 256,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
-};
-
-const jsonLd = {
-  "@context": "http://schema.org/",
-  "@type": "Person",
-  name: fullname,
-  jobTitle: occupation,
-  url: wisungyoComs,
-};
+export const metadata: Metadata = metaData;
 
 export default function RootLayout({
   children,
@@ -74,7 +21,7 @@ export default function RootLayout({
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
         />
         <SpeedInsights />
       </body>

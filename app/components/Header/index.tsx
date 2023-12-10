@@ -21,9 +21,9 @@ const Header = () => {
           </div>
         </div>
         <div className="flex flex-col items-start gap-1 md:hidden">
-          <h1 id="fullname" className="font-bold text-2xl text-center">
+          <h2 id="fullname" className="font-bold text-2xl text-center">
             {fullname}
-          </h1>
+          </h2>
           <div className="w-full">
             <h2 className="text-primary text-lg font-semibold text-center">
               {occupation}

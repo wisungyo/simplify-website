@@ -14,9 +14,10 @@ const Bio = () => {
           <span className="text-base">
             {year}
             {bio}
-            <a href={carousellGroup}>
-              <span className="text-primary">{laku6Carousell}</span>.
-            </a>
+            <h2 className="inline text-primary">
+              <a href={carousellGroup}>{laku6Carousell}</a>
+            </h2>
+            .
           </span>
           <span className="text-base">{bio2}</span>
         </div>
