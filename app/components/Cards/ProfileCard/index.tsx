@@ -33,12 +33,12 @@ const ProfileCard = (props: IProfileCard) => {
           <p className="text-sm">{description}</p>
           <div className="flex flex-row flex-wrap gap-2 mt-2">
             {stacks.map((data) => (
-              <div
+              <h3
                 key={data.id}
                 className="rounded-2xl px-3 py-2 text-xs ring-1 ring-neutral group-hover:ring-0 group-hover:text-primary/75 group-hover:bg-primary/10"
               >
                 {data.name}
-              </div>
+              </h3>
             ))}
           </div>
         </div>
