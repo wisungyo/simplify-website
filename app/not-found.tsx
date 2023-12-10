@@ -1,7 +1,6 @@
-import Bio from "./components/Bio";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import NotFound from "./components/NotFound";
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import NotFound from "@/app/components/NotFound";
 
 const NotFoundPage = () => {
   return (

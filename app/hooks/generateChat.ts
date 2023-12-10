@@ -1,4 +1,4 @@
-import { ChatBubble } from "../constants/types";
+import { ChatBubble } from "@/app/constants/types";
 
 const generateChat = (
   text: string,

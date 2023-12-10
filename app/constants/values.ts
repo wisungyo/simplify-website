@@ -7,8 +7,8 @@ import {
   Question,
   Quotes,
 } from "@/app/constants/types";
-import { description, fullname, occupation } from "./labels";
-import { wisungyoComs } from "./links";
+import { description, fullname, occupation } from "@/app/constants/labels";
+import { wisungyoComs } from "@/app/constants/links";
 
 export const maxChats: number = 10;
 

@@ -1,5 +1,5 @@
-import { ChatBubble } from "../constants/types";
-import { maxChats } from "../constants/values";
+import { ChatBubble } from "@/app/constants/types";
+import { maxChats } from "@/app/constants/values";
 
 const balanceChats = (
   chats: ChatBubble[],

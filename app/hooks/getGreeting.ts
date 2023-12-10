@@ -4,7 +4,7 @@ import {
   goodEvening,
   goodMorning,
 } from "@/app/constants/labels";
-import { ChatBubble } from "../constants/types";
+import { ChatBubble } from "@/app/constants/types";
 
 const getGreeting = (): ChatBubble => {
   const currentTime = new Date().getHours();

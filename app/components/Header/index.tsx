@@ -1,7 +1,7 @@
 import { fullname, occupation } from "@/app/constants/labels";
 import Image from "next/image";
 import Divider from "@/app/components/Divider";
-import Spacer from "../Spacer";
+import Spacer from "@/app/components/Spacer";
 const Header = () => {
   return (
     <>

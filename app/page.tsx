@@ -1,18 +1,21 @@
 import { AppProvider } from "@/app/AppContext";
+import { jsonLD } from "@/app/constants/values";
 import Bio from "@/app/components/Bio";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import HeaderLarge from "./components/HeaderLarge";
-import Navigation from "./components/Navigation";
-import FooterIcons from "./components/Footer/FooterIcons";
-import Profile from "./components/Profile";
-import FadeIn from "./components/FadeIn";
-import FadeInRight from "./components/FadeInRight";
+import HeaderLarge from "@/app/components/HeaderLarge";
+import Navigation from "@/app/components/Navigation";
+import FooterIcons from "@/app/components/Footer/FooterIcons";
+import Profile from "@/app/components/Profile";
+import FadeIn from "@/app/components/FadeIn";
+import FadeInRight from "@/app/components/FadeInRight";
+import StructuredData from "@/app/components/StructuredData";
 
 export default function Home() {
   return (
     <>
       <AppProvider>
+        <StructuredData data={jsonLD} />
         <main className="mx-auto max-w-6xl px-4 py-8">
           <div className="flex flex-row gap-12">
             <div
