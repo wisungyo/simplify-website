@@ -35,19 +35,21 @@ const Navigation = () => {
       <div className="flex flex-col gap-3">
         {navigation.map((data, index) => (
           <span key={index} className="flex">
-            <div className="group flex flex-row items-center gap-3">
+            <div
+              className="group flex flex-row items-center gap-3 hover:cursor-pointer"
+              onClick={() => handleScroll(data.url)}
+            >
               <div
                 className={`h-[1px] ${
                   data.url === active
                     ? "w-20 bg-primary"
                     : "w-8 bg-neutral-content"
-                } transition-all duration-200 group-hover:w-20 group-hover:bg-primary group-hover:cursor-pointer`}
+                } transition-all duration-200 group-hover:w-20 group-hover:bg-primary`}
               />
               <div
                 className={`text-xs uppercase py-1 ${
                   data.url === active && "text-primary"
-                } group-hover:text-primary transition-all duration-200 group-hover:cursor-pointer`}
-                onClick={() => handleScroll(data.url)}
+                } group-hover:text-primary transition-all duration-200`}
               >
                 {data.name}
               </div>

@@ -31,6 +31,11 @@ export const navigation: Navigation[] = [
     url: "awards",
     isActive: false,
   },
+  // {
+  //   name: "Contact",
+  //   url: "contact",
+  //   isActive: false,
+  // },
 ];
 
 export const experience: Profile[] = [
@@ -49,15 +54,15 @@ export const experience: Profile[] = [
       },
       {
         id: "1",
-        name: "NextJS",
+        name: "Next.js",
       },
       {
         id: "2",
-        name: "Javascript",
+        name: "JavaScript",
       },
       {
         id: "3",
-        name: "Typescript",
+        name: "TypeScript",
       },
     ],
   },
@@ -68,7 +73,7 @@ export const experience: Profile[] = [
     description:
       "Worked along side with UI team and other engineers to develop collaborative finance Android app.",
     period: "JUNE — SEP 2020",
-    url: "https://www.binaracademy.com/",
+    url: "https://www.binaracademy.com/en/about",
     stacks: [
       {
         id: "0",
@@ -77,14 +82,6 @@ export const experience: Profile[] = [
       {
         id: "1",
         name: "Android Studio",
-      },
-      {
-        id: "2",
-        name: "Retrofit",
-      },
-      {
-        id: "3",
-        name: "Coroutine",
       },
     ],
   },
@@ -95,7 +92,7 @@ export const experience: Profile[] = [
     description:
       "Developed and styled official website of Bantu Belajar, a product with intention to develop comunity literacy.",
     period: "MAR — JUNE 2020",
-    url: "https://www.binaracademy.com/",
+    url: "https://www.binaracademy.com/en/about",
     stacks: [
       {
         id: "0",
@@ -119,11 +116,11 @@ export const projects: Profile[] = [
     stacks: [
       {
         id: "0",
-        name: "NextJS",
+        name: "Next.js",
       },
       {
         id: "1",
-        name: "Typescript",
+        name: "TypeScript",
       },
       {
         id: "2",
@@ -131,7 +128,7 @@ export const projects: Profile[] = [
       },
       {
         id: "3",
-        name: "Former Motion",
+        name: "Framer Motion",
       },
     ],
   },
@@ -139,16 +136,16 @@ export const projects: Profile[] = [
     id: "3",
     title: "Anime Vault",
     description:
-      "Anime Vault website which shows bunch of anime list together with its rating and other info, which is coming from real API.",
+      "Infinite Anime Vault website which shows bunch of anime list together with its rating and other info, which is coming from real API.",
     url: "https://anime-vault-roan.vercel.app/",
     stacks: [
       {
         id: "0",
-        name: "NextJS",
+        name: "Next.js",
       },
       {
         id: "1",
-        name: "Typescript",
+        name: "TypeScript",
       },
       {
         id: "2",
@@ -156,7 +153,7 @@ export const projects: Profile[] = [
       },
       {
         id: "3",
-        name: "Former Motion",
+        name: "Framer Motion",
       },
     ],
   },
@@ -175,14 +172,6 @@ export const projects: Profile[] = [
         id: "1",
         name: "Android Studio",
       },
-      {
-        id: "2",
-        name: "Retrofit",
-      },
-      {
-        id: "3",
-        name: "Coroutine",
-      },
     ],
   },
   {
@@ -199,14 +188,6 @@ export const projects: Profile[] = [
       {
         id: "1",
         name: "Android Studio",
-      },
-      {
-        id: "2",
-        name: "Retrofit",
-      },
-      {
-        id: "3",
-        name: "Coroutine",
       },
     ],
   },

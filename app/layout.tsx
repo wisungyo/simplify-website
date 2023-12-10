@@ -68,7 +68,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="dracula">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} bg-gradient-to-tr from-[#282A36] from-60% to-[#2B2E3B] to-100%`}
+      >
         {children}
         <script
           type="application/ld+json"
