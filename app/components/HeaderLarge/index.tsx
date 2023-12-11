@@ -64,7 +64,7 @@ const HeaderLarge = () => {
     <>
       <div className="flex flex-col gap-12 pt-8">
         <div className="flex flex-col">
-          <span className="text-4xl font-bold leading-snug text-primary my-10">
+          <span className="text-3xl font-semibold leading-snug text-primary/75 my-10">
             {helloIam}
           </span>
           <p
