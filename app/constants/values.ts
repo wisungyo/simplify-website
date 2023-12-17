@@ -114,7 +114,7 @@ export const projects: Profile[] = [
     title: "wisungyo.com",
     description:
       "Portfolio site designed and coded from scratch to showcase my skills and past works.",
-    url: "#me",
+    url: "https://github.com/wisungyo/simplify-website",
     stacks: [
       {
         id: "0",
