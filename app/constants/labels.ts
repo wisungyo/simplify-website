@@ -16,7 +16,7 @@ export const footer = "Made with 🩷 by Wisnu.";
 export const description =
   "Wisnu Agung Prasetyo, also called wisungyo. A mobile & frontend developer of a tech company in Jakarta called Laku6, company under Carousell Group.";
 export const laku6Carousell = " Laku6 (Carousell Group)";
-export const helloIam = "Hello, I am";
+export const helloIam = "Hello! 👋🏻";
 export const wisnu = "Wisnu";
 export const agung = "Agung";
 export const prasetyo = "Prasetyo";
