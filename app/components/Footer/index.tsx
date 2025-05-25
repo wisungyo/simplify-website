@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="flex flex-col md:hidden">
         <Divider className="mb-16" />
         <FooterIcons />
-        <p className="text-neutral-accent text-center mt-8">{footer}</p>
       </div>
+      <p className="text-neutral-accent text-center mt-8">{footer}</p>
     </>
   );
 };
