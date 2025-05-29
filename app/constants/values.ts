@@ -110,6 +110,35 @@ export const experience: Profile[] = [
 
 export const projects: Profile[] = [
   {
+    id: "5",
+    title: "I Need Quote - Telegram Bot",
+    description:
+      "A Telegram bot that delivers daily inspirational quotes and allows users to request quotes on demand. Keep motivated with a fresh quote every day or get a random quote whenever you need inspiration! Find the bot on Telegram @ineedquotebot.",
+    url: "https://github.com/wisungyo/ineedquotebot",
+    stacks: [
+      {
+        id: "0",
+        name: "Node.js",
+      },
+      {
+        id: "1",
+        name: "Express.js",
+      },
+      {
+        id: "2",
+        name: "Telegram Bot API",
+      },
+      {
+        id: "3",
+        name: "ZenQuotes API",
+      },
+      {
+        id: "4",
+        name: "Node-cron",
+      },
+    ],
+  },
+  {
     id: "4",
     title: "wisungyo.com",
     description:
